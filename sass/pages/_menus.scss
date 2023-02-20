@@ -1,0 +1,46 @@
+/*Return to the home menu*/
+.return-index {
+    position: absolute;
+    top: 1.7rem;
+    left: 1rem;
+}
+
+/*Pictures of each menus*/
+.menu-image {
+    height: 17rem;
+
+    & img {
+        @include pictures();
+    }
+}
+
+/*Title of the menu + Heart*/
+.title-menu {
+    position: relative;
+
+    &__name {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        font-family: Shrikhand, sans-serif;
+        border-radius: 35px 35px 0 0;
+        font-size: 1.8rem;
+        font-weight: normal;
+        padding: 1.5rem 0 0.5rem 1rem;
+        top: -74px;
+        background-color: $bgc-secondary;
+    }
+
+    &__heart {
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        top: -2.5rem;
+        right: 1.5rem;
+        z-index: 1;
+
+        & img {
+            @include pictures();
+        }
+    }
+}

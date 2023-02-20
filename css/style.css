@@ -49,6 +49,53 @@ ul li:first-child i {
   margin-right: 0.9rem;
 }
 
+/*Return to the home menu*/
+.return-index {
+  position: absolute;
+  top: 1.7rem;
+  left: 1rem;
+}
+
+/*Pictures of each menus*/
+.menu-image {
+  height: 17rem;
+}
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*Title of the menu + Heart*/
+.title-menu {
+  position: relative;
+}
+.title-menu__name {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  font-family: Shrikhand, sans-serif;
+  border-radius: 35px 35px 0 0;
+  font-size: 1.8rem;
+  font-weight: normal;
+  padding: 1.5rem 0 0.5rem 1rem;
+  top: -74px;
+  background-color: #f7f7f7;
+}
+.title-menu__heart {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -2.5rem;
+  right: 1.5rem;
+  z-index: 1;
+}
+.title-menu__heart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*Future form allowing you to indicate the location of your choice*/
 .location {
   display: flex;
@@ -199,7 +246,6 @@ ul li:first-child i {
   z-index: 2;
 }
 .restaurants__card-fav-checkbox:checked + .restaurants__card-fav-icon::after {
-  font-weight: bold;
   opacity: 1;
   cursor: pointer;
 }
