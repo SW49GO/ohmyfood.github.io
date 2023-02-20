@@ -1,3 +1,4 @@
+/*Loading Spinner*/
 /*Default buttons*/
 /*Formatting the manual blocks*/
 /*Formatting Pictures*/
@@ -1118,6 +1119,164 @@ ul li:first-child i {
     margin-right: 3.7rem;
   }
 }
+.spinner {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #fff;
+  animation: appear-spinner 500ms 2s ease forwards;
+}
+.spinner__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.spinner__container__letters {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 1.2rem;
+  width: 9.3rem;
+  height: 9.3rem;
+  border-radius: 50%;
+  box-shadow: 6px 6px 5px 0px rgba(153, 226, 208, 0.75) inset;
+  animation: rotate-spinner 0.6s ease-in-out 3;
+}
+.spinner__container__letters span {
+  display: block;
+  font-size: 1em;
+}
+.spinner__container__letters::after {
+  content: " ";
+  width: 0.75rem;
+  height: 10.3rem;
+  border-radius: 20%;
+  border: 0.25rem solid;
+  border-color: #9356DC rgba(0, 0, 0, 0) #9356DC rgba(0, 0, 0, 0);
+  position: absolute;
+  top: -0.8rem;
+  animation: rotate-spinner 0.6s ease reverse 3;
+}
+.spinner__container__letters img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  position: absolute;
+  top: 2.75rem;
+  animation: fork-knife 0.6s alternate 3;
+}
+
+@keyframes appear-spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+    z-index: -99;
+  }
+}
+@keyframes rotate-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fork-knife {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+.l1 {
+  font-weight: bold;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(289deg);
+  top: 62px;
+  left: -2px;
+  color: #9356DC;
+}
+
+.l2 {
+  font-weight: bold;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(300deg);
+  top: 43px;
+  left: 4px;
+  color: #FF79DA;
+}
+
+.l3 {
+  font-weight: bold;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(317deg);
+  top: 24px;
+  left: 16px;
+  color: #9356DC;
+}
+
+.l4 {
+  font-weight: bold;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(335deg);
+  top: 8px;
+  left: 35px;
+  color: #FF79DA;
+}
+
+.l5 {
+  font-weight: bold;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(349deg);
+  top: 0;
+  left: 55px;
+  color: #9356DC;
+}
+
+.l6 {
+  font-weight: bold;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(7deg);
+  top: -4px;
+  left: 74px;
+  color: #FF79DA;
+}
+
+.l7 {
+  font-weight: bold;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(27deg);
+  top: -1px;
+  left: 97px;
+  color: #9356DC;
+}
+
+.l8 {
+  font-weight: bold;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(37deg);
+  top: 9px;
+  left: 116px;
+  color: #FF79DA;
+}
+
 /*Future form allowing you to indicate the location of your choice*/
 .location {
   display: flex;

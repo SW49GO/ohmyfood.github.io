@@ -1,3 +1,44 @@
+/*Loading Spinner*/
+@mixin letters-spinner {
+    font-weight: bold;
+    position: absolute;
+    transform-origin: top left;
+}
+
+@mixin spinner-animations {
+    @keyframes appear-spinner {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            display: none;
+            z-index: -99;
+        }
+    }
+
+    @keyframes rotate-spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes fork-knife {
+        from {
+            transform: scale(0.3);
+        }
+
+        to {
+            transform: scale(1.1);
+        }
+    }
+}
+
 /*Default buttons*/
 @mixin buttons {
     text-decoration: none;
