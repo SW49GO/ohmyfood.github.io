@@ -1,0 +1,15 @@
+/*Default buttons*/
+@mixin buttons {
+    text-decoration: none;
+    padding: 1rem 1.1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 6px 20px -6px #6a686a;
+    color: $color-link;
+    background: $secondary-color;
+    background: linear-gradient(to bottom, $secondary-color 0%, $primary-color 100%);
+}
+
+@mixin buttons-hover {
+    background: linear-gradient(to bottom, lighten($secondary-color, 7%) 0%, $primary-color 100%);
+    box-shadow: 0px 7px 25px -4px darken(#6a686a, 7%);
+}

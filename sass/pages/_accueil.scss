@@ -19,3 +19,32 @@
         color: #000;
     }
 }
+
+/*Presentation of the Site*/
+.presentation {
+    height: 19.5rem;
+    text-align: center;
+    background-color: $bgc-secondary;
+
+    & h1 {
+        width: 62%;
+        line-height: 1.7rem;
+        margin: 0 auto;
+        padding: 2.5rem 0 1.5rem 0;
+    }
+
+    & p {
+        font-size: 1.1rem;
+        color: #6a686a;
+        margin-bottom: 3rem;
+    }
+
+    /*Buttons + buttons hover*/
+    &__btn {
+        @include buttons();
+
+        &:hover {
+            @include buttons-hover();
+        }
+    }
+}

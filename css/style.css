@@ -1,3 +1,4 @@
+/*Default buttons*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"); /*header with stratup logo*/
 header {
   margin: 0 auto;
@@ -64,6 +65,38 @@ ul li:first-child i {
   font-weight: 700;
   font-size: 1rem;
   color: #000;
+}
+
+/*Presentation of the Site*/
+.presentation {
+  height: 19.5rem;
+  text-align: center;
+  background-color: #f7f7f7;
+  /*Buttons + buttons hover*/
+}
+.presentation h1 {
+  width: 62%;
+  line-height: 1.7rem;
+  margin: 0 auto;
+  padding: 2.5rem 0 1.5rem 0;
+}
+.presentation p {
+  font-size: 1.1rem;
+  color: #6a686a;
+  margin-bottom: 3rem;
+}
+.presentation__btn {
+  text-decoration: none;
+  padding: 1rem 1.1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 6px 20px -6px #6a686a;
+  color: #fff;
+  background: #FF79DA;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+}
+.presentation__btn:hover {
+  background: linear-gradient(to bottom, #ff9de4 0%, #9356DC 100%);
+  box-shadow: 0px 7px 25px -4px #585658;
 }
 
 * {
