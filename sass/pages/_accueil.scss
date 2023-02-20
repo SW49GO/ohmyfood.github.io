@@ -136,7 +136,7 @@
             padding: 1rem;
         }
 
-        // Implementation of a checkbox to click on the heart
+        /* Implementation of a checkbox to click on the heart*/
         &-fav-checkbox {
             position: absolute;
             width: 1.5rem;
@@ -147,12 +147,14 @@
             z-index: 2;
 
             // When chexbok is checked -> appear over the ::after of the fav-icon
+            /*Appearance of the full heart when checked*/
             &:checked+.restaurants__card-fav-icon::after {
                 opacity: 1;
                 cursor: pointer;
             }
         }
 
+        /*Empty heart positioning*/
         &-fav-icon {
             position: absolute;
             top: 12.5rem;
@@ -165,6 +167,7 @@
                 @include pictures();
             }
 
+            /*Full heart content and appearance gradually*/
             &::after {
                 content: '';
                 position: absolute;

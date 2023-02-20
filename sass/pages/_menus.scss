@@ -128,7 +128,7 @@ $menusChoice: 1, 2, 3;
             padding-left: 1rem;
             opacity: 0;
 
-            /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+            /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
 
             @if $menu ==starters {
                 @if $choice ==1 {
@@ -206,6 +206,7 @@ $menusChoice: 1, 2, 3;
 
             // Cible l'élément ::before d'un élément <label> qui suit immédiatement un élément <input>, 
             // pour étendre la possibilité du clic sur toute la carte
+            /*Resizing of the clickable part*/
             & input[type="checkbox"]+label::before {
                 content: "";
                 position: absolute;
@@ -217,24 +218,28 @@ $menusChoice: 1, 2, 3;
 
             // Sélectionne le 5ème frère du parent de <input> -> .check-choice
             // pour faire apparaître la checkbox (right -70px->-5px)
+            /*Appearance of the confirmation of the choice*/
             & input[type="checkbox"]:checked~:nth-child(5) {
                 animation: appear-checkbox 1s 0.1s ease forwards;
             }
 
             // Sélectionne le 1er enfants des enfants contenu dans .check-choice (>* tt les enfants direct peut importe l'élément)
             // pour faire tourner (rotate 0->360°) l'icone check
+            /*Rotation of the icon in the checkbox*/
             & input[type="checkbox"]:checked~:nth-child(5)>*:nth-child(1) {
                 animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
             }
 
             // Sélectionne tout les <h3> qui suivent directement <input> 
             // pour diminuer la taille (width 100%->75%) de la boîte contenant le titre du menu
+            /*Decreasing the size of the submenu title*/
             & input[type=checkbox]:checked~h3 {
                 animation: deplace-submenu-title 0.5s ease-in-out forwards;
             }
 
             // Sélectionne .price dans .menu__X__choiceX__name, qui est un frère suivant le <h3>, lui même un des frères de <input> 
             // pour ajouter une marge (margin-right 0->60px) qui va déplacer le prix du menu
+            /*Submenu price shift to the left*/
             & input[type=checkbox]:checked~h3~.menus__#{$menu}-choice#{$choice}__name .price {
                 animation: deplace-submenu-price 0.5s ease-in-out forwards;
             }

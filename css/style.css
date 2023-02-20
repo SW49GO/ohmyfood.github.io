@@ -158,8 +158,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__starters-choice1 h3 {
   white-space: nowrap;
@@ -251,8 +256,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__starters-choice2 h3 {
   white-space: nowrap;
@@ -344,8 +354,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__starters-choice3 h3 {
   white-space: nowrap;
@@ -458,8 +473,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__dishes-choice1 h3 {
   white-space: nowrap;
@@ -551,8 +571,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__dishes-choice2 h3 {
   white-space: nowrap;
@@ -644,8 +669,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__dishes-choice3 h3 {
   white-space: nowrap;
@@ -758,8 +788,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__desserts-choice1 h3 {
   white-space: nowrap;
@@ -851,8 +886,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__desserts-choice2 h3 {
   white-space: nowrap;
@@ -944,8 +984,13 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
-  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
 }
 .menus__desserts-choice3 h3 {
   white-space: nowrap;
@@ -1185,6 +1230,8 @@ ul li:first-child i {
   border-radius: 1.2rem;
   overflow: hidden;
   margin: 1rem 0;
+  /* Implementation of a checkbox to click on the heart*/
+  /*Empty heart positioning*/
 }
 .restaurants__card-link {
   text-decoration: none;
@@ -1221,6 +1268,7 @@ ul li:first-child i {
   bottom: 2rem;
   right: 1.5rem;
   z-index: 2;
+  /*Appearance of the full heart when checked*/
 }
 .restaurants__card-fav-checkbox:checked + .restaurants__card-fav-icon::after {
   opacity: 1;
@@ -1233,6 +1281,7 @@ ul li:first-child i {
   width: 1.5rem;
   height: 1.5rem;
   margin: 1.5rem 1.5rem 0 0;
+  /*Full heart content and appearance gradually*/
 }
 .restaurants__card-fav-icon img {
   width: 100%;

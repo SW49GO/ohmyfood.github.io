@@ -12,7 +12,144 @@
 </head>
 
 <body>
-
+    <header>
+        <div class="logo">
+            <img class="logo__img" src="../images/logo/ohmyfood@2x.svg" alt="Logo de l'entreprise OhMyFood!">
+        </div>
+        <!-- Arrow to return to the home menu -->
+        <div class="return-index"><a href="../index.html"><i class="fa-solid fa-arrow-left"></a></i></div>
+    </header>
+    <main>
+        <!-- Pictures of this menu -->
+        <div class="menu-image">
+            <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="Plat du restaurant À la française">
+        </div>
+        <!-- Title of this menu + Heart -->
+        <section class="title-menu">
+            <h1 class="title-menu__name">À la francaise</h1>
+            <div class="title-menu__heart"><img src="../images/heart/heart-regular.png" alt="Coeur J'aime">
+            </div>
+        </section>
+        <form class="menus" method="GET" action="/" name="a-la-francaise">
+            <section class="menus__starters">
+                <h2 class="menus__starters-title">Entrées</h2>
+                <span></span>
+                <article class="menus__starters-choice1">
+                    <input type="checkbox" name="fra-start-1" id="fra-s-1">
+                    <label for="fra-s-1"></label>
+                    <h3>Tartare de poulpe acidulé</h3>
+                    <div class="menus__starters-choice1__name">
+                        <p class="description">Aux zestes d'orange</p>
+                        <p class="price">25€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+                <article class="menus__starters-choice2">
+                    <input type="checkbox" name="fra-start-2" id="fra-s-2">
+                    <label for="fra-s-2"></label>
+                    <h3>Velouté de légumes d'antan</h3>
+                    <div class="menus__starters-choice2__name">
+                        <p class="description">Carotte, panais, topinambour</p>
+                        <p class="price">35€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+                <article class="menus__starters-choice3">
+                    <input type="checkbox" name="fra-start-3" id="fra-s-3">
+                    <label for="fra-s-3"></label>
+                    <h3>Soupe à l'oignon</h3>
+                    <div class="menus__starters-choice3__name">
+                        <p class="description">Revisitée</p>
+                        <p class="price">20€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+            </section>
+            <section class="menus__dishes">
+                <h2 class="menus__dishes-title">Plats</h2>
+                <span></span>
+                <article class="menus__dishes-choice1">
+                    <input type="checkbox" name="fra-dish-1" id="fra-di-1">
+                    <label for="fra-di-1"></label>
+                    <h3>Coquilles Saint-Jacques</h3>
+                    <div class="menus__dishes-choice1__name">
+                        <p class="description">Accompagnées d'une purée de panais</p>
+                        <p class="price">40€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+                <article class="menus__dishes-choice2">
+                    <input type="checkbox" name="fra-dish-2" id="fra-di-2">
+                    <label for="fra-di-2"></label>
+                    <h3>Magret de canard</h3>
+                    <div class="menus__dishes-choice2__name">
+                        <p class="description">Et parmentier de pommes de terre</p>
+                        <p class="price">35€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+                <article class="menus__dishes-choice3">
+                    <input type="checkbox" name="fra-dish-3" id="fra-di-3">
+                    <label for="fra-di-3"></label>
+                    <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                    <div class="menus__dishes-choice3__name">
+                        <p class="description">Sur son lit de gnocchis aux légumes</p>
+                        <p class="price">44€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+            </section>
+            <section class="menus__desserts">
+                <h2 class="menus__desserts-title">Desserts</h2>
+                <span></span>
+                <article class="menus__desserts-choice1">
+                    <input type="checkbox" name="fra-dess-1" id="fra-de-1">
+                    <label for="fra-de-1"></label>
+                    <h3>Pétales de violettes glacés</h3>
+                    <div class="menus__desserts-choice1__name">
+                        <p class="description">Et purée de noisettes</p>
+                        <p class="price">18€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+                <article class="menus__desserts-choice2">
+                    <input type="checkbox" name="fra-dess-2" id="fra-de-2">
+                    <label for="fra-de-2"></label>
+                    <h3>Fondant au chocolat</h3>
+                    <div class="menus__desserts-choice2__name">
+                        <p class="description">Revisité</p>
+                        <p class="price">22€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+                <article class="menus__desserts-choice3">
+                    <input type="checkbox" name="fra-dess-3" id="fra-de-3">
+                    <label for="fra-de-3"></label>
+                    <h3>Millefeuille croustillant</h3>
+                    <div class="menus__desserts-choice3__name">
+                        <p class="description">Myrtilles et pâte d’amande</p>
+                        <p class="price">23€</p>
+                    </div>
+                    <div class="check-choice"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+            </section>
+            <input class="menus__btn" type="submit" name="order" value="Commander" disabled>
+        </form>
+    </main>
+    <footer>
+        <h3>ohmyfood</h3>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>
+                    <p>Devenir partenaire</p>
+                </a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
