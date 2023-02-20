@@ -1,11 +1,11 @@
 @import "../utils/_variables";
-@import "../utils/mixins";
+@import "../utils/_mixins";
+@import "../utils/_fonts";
 @import "../components/_breakpoints";
 @import "../layouts/_header";
 @import "../layouts/footer";
 @import "../pages/_menus";
 @import "../pages/_accueil";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
 
 * {
     margin: 0;
