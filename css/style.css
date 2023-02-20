@@ -1,6 +1,8 @@
 /*Default buttons*/
 /*Formatting the manual blocks*/
 /*Formatting Pictures*/
+/*Animations on Menus*/
+/*Text cropping*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"); /*header with stratup logo*/
 header {
   margin: 0 auto;
@@ -96,6 +98,981 @@ ul li:first-child i {
   object-fit: cover;
 }
 
+/*Implementation of the differents menus*/
+.menus {
+  height: 75rem;
+  background-color: #f7f7f7;
+}
+.menus__btn {
+  text-decoration: none;
+  padding: 1rem 1.1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 6px 20px -6px #6a686a;
+  color: #fff;
+  background: #FF79DA;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  display: block;
+  opacity: 0;
+  border: none;
+  padding: 1rem 3rem;
+  margin: 2rem auto;
+  animation: appear-group-menu 0.5s 6.5s ease-in-out forwards;
+}
+.menus__btn:hover {
+  background: linear-gradient(to bottom, #ff9de4 0%, #9356DC 100%);
+  box-shadow: 0px 7px 25px -4px #585658;
+}
+
+/*The 3 differents menus*/
+.menus__starters {
+  opacity: 0;
+  /*Underline title*/
+  /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
+  animation: appear-group-menu 1s 0.5s ease-in-out forwards;
+}
+.menus__starters-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 1.5rem 0 0 1.5rem;
+}
+.menus__starters span {
+  display: block;
+  width: 3rem;
+  border: 2px solid #99E2D0;
+  margin: 0.3rem 0 1rem 1.5rem;
+}
+
+/*Implementation of the different classes for the submenus according to the $menusChoice map*/
+.menus__starters-choice1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
+}
+.menus__starters-choice1 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__starters-choice1 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__starters-choice1 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__starters-choice1 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__starters-choice1 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__starters-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__starters-choice1 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__starters-choice1 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__starters-choice1 input[type=checkbox]:checked ~ h3 ~ .menus__starters-choice1__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__starters-choice1__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__starters-choice1__name p {
+  display: inline-block;
+}
+.menus__starters-choice1__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__starters-choice1__name .description:hover {
+  overflow: visible;
+}
+.menus__starters-choice1__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__starters-choice1__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+.menus__starters-choice2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
+}
+.menus__starters-choice2 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__starters-choice2 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__starters-choice2 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__starters-choice2 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__starters-choice2 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__starters-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__starters-choice2 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__starters-choice2 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__starters-choice2 input[type=checkbox]:checked ~ h3 ~ .menus__starters-choice2__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__starters-choice2__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__starters-choice2__name p {
+  display: inline-block;
+}
+.menus__starters-choice2__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__starters-choice2__name .description:hover {
+  overflow: visible;
+}
+.menus__starters-choice2__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__starters-choice2__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+.menus__starters-choice3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
+}
+.menus__starters-choice3 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__starters-choice3 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__starters-choice3 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__starters-choice3 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__starters-choice3 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__starters-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__starters-choice3 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__starters-choice3 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__starters-choice3 input[type=checkbox]:checked ~ h3 ~ .menus__starters-choice3__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__starters-choice3__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__starters-choice3__name p {
+  display: inline-block;
+}
+.menus__starters-choice3__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__starters-choice3__name .description:hover {
+  overflow: visible;
+}
+.menus__starters-choice3__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__starters-choice3__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+/*The 3 differents menus*/
+.menus__dishes {
+  opacity: 0;
+  /*Underline title*/
+  /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
+  animation: appear-group-menu 1s 2s ease-in-out forwards;
+}
+.menus__dishes-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 1.5rem 0 0 1.5rem;
+}
+.menus__dishes span {
+  display: block;
+  width: 3rem;
+  border: 2px solid #99E2D0;
+  margin: 0.3rem 0 1rem 1.5rem;
+}
+
+/*Implementation of the different classes for the submenus according to the $menusChoice map*/
+.menus__dishes-choice1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
+}
+.menus__dishes-choice1 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__dishes-choice1 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__dishes-choice1 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__dishes-choice1 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__dishes-choice1 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__dishes-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__dishes-choice1 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__dishes-choice1 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__dishes-choice1 input[type=checkbox]:checked ~ h3 ~ .menus__dishes-choice1__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__dishes-choice1__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__dishes-choice1__name p {
+  display: inline-block;
+}
+.menus__dishes-choice1__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__dishes-choice1__name .description:hover {
+  overflow: visible;
+}
+.menus__dishes-choice1__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__dishes-choice1__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+.menus__dishes-choice2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
+}
+.menus__dishes-choice2 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__dishes-choice2 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__dishes-choice2 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__dishes-choice2 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__dishes-choice2 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__dishes-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__dishes-choice2 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__dishes-choice2 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__dishes-choice2 input[type=checkbox]:checked ~ h3 ~ .menus__dishes-choice2__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__dishes-choice2__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__dishes-choice2__name p {
+  display: inline-block;
+}
+.menus__dishes-choice2__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__dishes-choice2__name .description:hover {
+  overflow: visible;
+}
+.menus__dishes-choice2__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__dishes-choice2__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+.menus__dishes-choice3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
+}
+.menus__dishes-choice3 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__dishes-choice3 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__dishes-choice3 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__dishes-choice3 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__dishes-choice3 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__dishes-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__dishes-choice3 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__dishes-choice3 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__dishes-choice3 input[type=checkbox]:checked ~ h3 ~ .menus__dishes-choice3__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__dishes-choice3__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__dishes-choice3__name p {
+  display: inline-block;
+}
+.menus__dishes-choice3__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__dishes-choice3__name .description:hover {
+  overflow: visible;
+}
+.menus__dishes-choice3__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__dishes-choice3__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+/*The 3 differents menus*/
+.menus__desserts {
+  opacity: 0;
+  /*Underline title*/
+  /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
+  animation: appear-group-menu 1s 4.5s ease-in-out forwards;
+}
+.menus__desserts-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 1.5rem 0 0 1.5rem;
+}
+.menus__desserts span {
+  display: block;
+  width: 3rem;
+  border: 2px solid #99E2D0;
+  margin: 0.3rem 0 1rem 1.5rem;
+}
+
+/*Implementation of the different classes for the submenus according to the $menusChoice map*/
+.menus__desserts-choice1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
+}
+.menus__desserts-choice1 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__desserts-choice1 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__desserts-choice1 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__desserts-choice1 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__desserts-choice1 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__desserts-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__desserts-choice1 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__desserts-choice1 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__desserts-choice1 input[type=checkbox]:checked ~ h3 ~ .menus__desserts-choice1__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__desserts-choice1__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__desserts-choice1__name p {
+  display: inline-block;
+}
+.menus__desserts-choice1__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__desserts-choice1__name .description:hover {
+  overflow: visible;
+}
+.menus__desserts-choice1__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__desserts-choice1__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+.menus__desserts-choice2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
+}
+.menus__desserts-choice2 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__desserts-choice2 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__desserts-choice2 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__desserts-choice2 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__desserts-choice2 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__desserts-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__desserts-choice2 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__desserts-choice2 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__desserts-choice2 input[type=checkbox]:checked ~ h3 ~ .menus__desserts-choice2__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__desserts-choice2__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__desserts-choice2__name p {
+  display: inline-block;
+}
+.menus__desserts-choice2__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__desserts-choice2__name .description:hover {
+  overflow: visible;
+}
+.menus__desserts-choice2__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__desserts-choice2__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+.menus__desserts-choice3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*Submenus animation (opacity 0->1 & height 0->5.6rem)*/
+  animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
+}
+.menus__desserts-choice3 h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.menus__desserts-choice3 .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__desserts-choice3 .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__desserts-choice3 input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__desserts-choice3 input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+.menus__desserts-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__desserts-choice3 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__desserts-choice3 input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__desserts-choice3 input[type=checkbox]:checked ~ h3 ~ .menus__desserts-choice3__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__desserts-choice3__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+.menus__desserts-choice3__name p {
+  display: inline-block;
+}
+.menus__desserts-choice3__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__desserts-choice3__name .description:hover {
+  overflow: visible;
+}
+.menus__desserts-choice3__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__desserts-choice3__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+
+@keyframes appear-group-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear-submenu-choice {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 5.6rem;
+  }
+}
+@keyframes appear-checkbox {
+  from {
+    right: -4.3rem;
+  }
+  to {
+    right: -0.3rem;
+  }
+}
+@keyframes rotate-icon-checkbox {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes deplace-submenu-title {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 75%;
+  }
+}
+@keyframes deplace-submenu-price {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 3.7rem;
+  }
+}
 /*Future form allowing you to indicate the location of your choice*/
 .location {
   display: flex;

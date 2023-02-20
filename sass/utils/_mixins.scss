@@ -31,3 +31,76 @@
     height: 100%;
     object-fit: cover;
 }
+
+/*Animations on Menus*/
+@mixin animations-menus {
+
+    @keyframes appear-group-menu {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes appear-submenu-choice {
+        from {
+            opacity: 0;
+            height: 0;
+        }
+
+        to {
+            opacity: 1;
+            height: 5.6rem;
+        }
+    }
+
+    @keyframes appear-checkbox {
+        from {
+            right: -4.3rem;
+        }
+
+        to {
+            right: -0.3rem;
+        }
+    }
+
+    @keyframes rotate-icon-checkbox {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes deplace-submenu-title {
+        from {
+            width: 100%;
+        }
+
+        to {
+            width: 75%;
+        }
+    }
+
+    @keyframes deplace-submenu-price {
+        from {
+            margin-right: 0;
+        }
+
+        to {
+            margin-right: 3.7rem;
+        }
+    }
+}
+
+/*Text cropping*/
+@mixin text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
