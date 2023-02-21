@@ -4,17 +4,36 @@
     top: 1.7rem;
     left: 1rem;
 
+    & a {
+        color: #000;
+    }
+
     @include tablet {
         font-size: 1.5rem;
     }
+
+    @include desktop {
+        font-size: 2rem;
+    }
+
 }
 
 /*Pictures of each menus*/
 .menu-image {
     height: 17rem;
 
+    @include desktop {
+        width: 80%;
+        height: 26rem;
+        margin: 0 auto;
+    }
+
     & img {
         @include pictures();
+
+        @include desktop {
+            border-radius: 4rem;
+        }
     }
 }
 
@@ -38,6 +57,12 @@
             padding-left: 4rem;
             font-size: 2rem;
         }
+
+        @include desktop {
+            padding-left: 10%;
+            border-radius: 100px 100px 0 0;
+            font-size: 2.5rem;
+        }
     }
 
     &__heart {
@@ -50,6 +75,10 @@
 
         @include tablet {
             right: 5.5rem;
+        }
+
+        @include desktop {
+            right: 11%;
         }
 
         & img {
@@ -67,6 +96,10 @@
         height: 85rem;
     }
 
+    @include desktop {
+        height: 100rem;
+    }
+
     &__btn {
         @include buttons();
         display: block;
@@ -80,6 +113,11 @@
         @include tablet {
             margin: 3rem auto;
             font-size: 1rem;
+        }
+
+        @include desktop {
+            font-size: 1.5rem;
+            margin: 3.5rem auto;
         }
 
         &:hover {
@@ -102,6 +140,10 @@ $menusChoice: 1, 2, 3;
     .menus__#{$menu} {
         opacity: 0;
 
+        @include desktop {
+            padding-left: 12%;
+        }
+
         &-title {
             font-size: 1.2rem;
             font-weight: normal;
@@ -111,6 +153,12 @@ $menusChoice: 1, 2, 3;
             @include tablet {
                 padding-top: 2.5rem;
             }
+
+            @include desktop {
+                font-size: 1.5rem;
+                padding-top: 3.5rem;
+            }
+
         }
 
         /*Underline title*/
@@ -119,6 +167,11 @@ $menusChoice: 1, 2, 3;
             width: 3rem;
             border: 2px solid $tertiary-color;
             margin: 0.3rem 0 1rem 1.5rem;
+
+            @include desktop {
+                width: 4rem;
+                margin-bottom: 2.5rem;
+            }
         }
 
         /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
@@ -157,6 +210,22 @@ $menusChoice: 1, 2, 3;
             @include tablet {
                 width: 80%;
                 margin: 1rem auto;
+            }
+
+            @include desktop {
+                width: 55%;
+
+                @if $choice ==1 {
+                    margin: 1rem 0 1.5rem 10%;
+                }
+
+                @else if $choice ==2 {
+                    margin: 1rem 0 1.5rem 15%;
+                }
+
+                @else {
+                    margin: 1rem 0 1.5rem 20%;
+                }
             }
 
             /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
@@ -212,6 +281,10 @@ $menusChoice: 1, 2, 3;
                 @include tablet {
                     margin-left: 1.5rem;
                 }
+
+                @include desktop {
+                    font-size: 1.5rem;
+                }
             }
 
             & .check-choice {
@@ -253,6 +326,10 @@ $menusChoice: 1, 2, 3;
                 @include tablet {
                     width: 47.5rem;
                 }
+
+                @include desktop {
+                    width: 51rem;
+                }
             }
 
             // Sélectionne le 5ème frère du parent de <input> -> .check-choice
@@ -290,6 +367,10 @@ $menusChoice: 1, 2, 3;
 
                 @include tablet {
                     margin-left: 1.5rem;
+                }
+
+                @include desktop {
+                    font-size: 1.2rem;
                 }
 
                 & p {

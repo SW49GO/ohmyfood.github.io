@@ -20,6 +20,14 @@ ul {
         justify-content: space-around;
         padding: 1rem 0 2rem;
     }
+
+    @include desktop {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem 0 2rem;
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 
 ul li a {
