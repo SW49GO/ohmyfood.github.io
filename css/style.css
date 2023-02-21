@@ -14,6 +14,11 @@ header {
   padding: 1.5rem 0.5rem 1rem 0.5rem;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .logo {
+    width: 33%;
+  }
+}
 .logo__img {
   width: 100%;
   height: 100%;
@@ -36,6 +41,13 @@ ul {
   padding-left: 0;
   list-style: none;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0 2rem;
+  }
+}
 
 ul li a {
   display: flex;
@@ -57,6 +69,11 @@ ul li:first-child i {
   position: absolute;
   top: 1.7rem;
   left: 1rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .return-index {
+    font-size: 1.5rem;
+  }
 }
 
 /*Pictures of each menus*/
@@ -85,6 +102,12 @@ ul li:first-child i {
   top: -74px;
   background-color: #f7f7f7;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .title-menu__name {
+    padding-left: 4rem;
+    font-size: 2rem;
+  }
+}
 .title-menu__heart {
   position: absolute;
   width: 1.5rem;
@@ -92,6 +115,11 @@ ul li:first-child i {
   top: -2.5rem;
   right: 1.5rem;
   z-index: 1;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .title-menu__heart {
+    right: 5.5rem;
+  }
 }
 .title-menu__heart img {
   width: 100%;
@@ -103,6 +131,11 @@ ul li:first-child i {
 .menus {
   height: 75rem;
   background-color: #f7f7f7;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus {
+    height: 85rem;
+  }
 }
 .menus__btn {
   text-decoration: none;
@@ -118,6 +151,12 @@ ul li:first-child i {
   padding: 1rem 3rem;
   margin: 2rem auto;
   animation: appear-group-menu 0.5s 6.5s ease-in-out forwards;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__btn {
+    margin: 3rem auto;
+    font-size: 1rem;
+  }
 }
 .menus__btn:hover {
   background: linear-gradient(to bottom, #ff9de4 0%, #9356DC 100%);
@@ -136,6 +175,11 @@ ul li:first-child i {
   font-weight: normal;
   text-transform: uppercase;
   padding: 1.5rem 0 0 1.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-title {
+    padding-top: 2.5rem;
+  }
 }
 .menus__starters span {
   display: block;
@@ -167,6 +211,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice1 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__starters-choice1 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -174,6 +224,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice1 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__starters-choice1 .check-choice {
   position: absolute;
@@ -205,6 +260,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice1 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__starters-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -221,6 +281,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice1__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__starters-choice1__name p {
   display: inline-block;
@@ -265,6 +330,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice2 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__starters-choice2 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -272,6 +343,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice2 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__starters-choice2 .check-choice {
   position: absolute;
@@ -303,6 +379,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice2 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__starters-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -319,6 +400,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice2__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__starters-choice2__name p {
   display: inline-block;
@@ -363,6 +449,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice3 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__starters-choice3 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -370,6 +462,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice3 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__starters-choice3 .check-choice {
   position: absolute;
@@ -401,6 +498,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice3 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__starters-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -417,6 +519,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__starters-choice3__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__starters-choice3__name p {
   display: inline-block;
@@ -452,6 +559,11 @@ ul li:first-child i {
   text-transform: uppercase;
   padding: 1.5rem 0 0 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-title {
+    padding-top: 2.5rem;
+  }
+}
 .menus__dishes span {
   display: block;
   width: 3rem;
@@ -482,6 +594,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice1 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__dishes-choice1 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -489,6 +607,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice1 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__dishes-choice1 .check-choice {
   position: absolute;
@@ -520,6 +643,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice1 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__dishes-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -536,6 +664,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice1__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__dishes-choice1__name p {
   display: inline-block;
@@ -580,6 +713,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice2 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__dishes-choice2 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -587,6 +726,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice2 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__dishes-choice2 .check-choice {
   position: absolute;
@@ -618,6 +762,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice2 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__dishes-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -634,6 +783,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice2__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__dishes-choice2__name p {
   display: inline-block;
@@ -678,6 +832,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice3 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__dishes-choice3 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -685,6 +845,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice3 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__dishes-choice3 .check-choice {
   position: absolute;
@@ -716,6 +881,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice3 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__dishes-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -732,6 +902,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__dishes-choice3__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__dishes-choice3__name p {
   display: inline-block;
@@ -767,6 +942,11 @@ ul li:first-child i {
   text-transform: uppercase;
   padding: 1.5rem 0 0 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-title {
+    padding-top: 2.5rem;
+  }
+}
 .menus__desserts span {
   display: block;
   width: 3rem;
@@ -797,6 +977,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice1 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__desserts-choice1 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -804,6 +990,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice1 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__desserts-choice1 .check-choice {
   position: absolute;
@@ -835,6 +1026,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice1 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__desserts-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -851,6 +1047,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice1__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__desserts-choice1__name p {
   display: inline-block;
@@ -895,6 +1096,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice2 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__desserts-choice2 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -902,6 +1109,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice2 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__desserts-choice2 .check-choice {
   position: absolute;
@@ -933,6 +1145,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice2 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__desserts-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -949,6 +1166,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice2__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__desserts-choice2__name p {
   display: inline-block;
@@ -993,6 +1215,12 @@ ul li:first-child i {
   /*Decreasing the size of the submenu title*/
   /*Submenu price shift to the left*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice3 {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
 .menus__desserts-choice3 h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -1000,6 +1228,11 @@ ul li:first-child i {
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice3 h3 {
+    margin-left: 1.5rem;
+  }
 }
 .menus__desserts-choice3 .check-choice {
   position: absolute;
@@ -1031,6 +1264,11 @@ ul li:first-child i {
   height: 5.5rem;
   margin-right: 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice3 input[type=checkbox] + label::before {
+    width: 47.5rem;
+  }
+}
 .menus__desserts-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
   animation: appear-checkbox 1s 0.1s ease forwards;
 }
@@ -1047,6 +1285,11 @@ ul li:first-child i {
   display: flex;
   justify-content: space-between;
   font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__desserts-choice3__name {
+    margin-left: 1.5rem;
+  }
 }
 .menus__desserts-choice3__name p {
   display: inline-block;
@@ -1304,6 +1547,11 @@ ul li:first-child i {
   background-color: #f7f7f7;
   /*Buttons + buttons hover*/
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .presentation {
+    padding-top: 3rem;
+  }
+}
 .presentation h1 {
   width: 62%;
   line-height: 1.7rem;
@@ -1333,6 +1581,11 @@ ul li:first-child i {
 .manual h2 {
   margin: 3rem 0 2rem 1.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .manual h2 {
+    margin-left: 5rem;
+  }
+}
 .manual__site {
   display: flex;
   flex-direction: column;
@@ -1356,6 +1609,12 @@ ul li:first-child i {
   margin: 1rem 1rem 1rem 2rem;
   background-color: #f7f7f7;
   color: #000;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .manual__site__item {
+    width: 55%;
+    justify-content: center;
+  }
 }
 .manual__site__item:hover {
   background: rgba(255, 121, 218, 0.15);
@@ -1384,6 +1643,11 @@ ul li:first-child i {
   margin: 4rem 0 0 0;
   padding: 3rem 1rem;
 }
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants {
+    padding: 3rem 6rem;
+  }
+}
 .restaurants__card {
   position: relative;
   border-radius: 1.2rem;
@@ -1391,6 +1655,11 @@ ul li:first-child i {
   margin: 1rem 0;
   /* Implementation of a checkbox to click on the heart*/
   /*Empty heart positioning*/
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants__card {
+    margin: 3rem 0;
+  }
 }
 .restaurants__card-link {
   text-decoration: none;

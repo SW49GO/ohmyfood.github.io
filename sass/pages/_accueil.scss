@@ -124,6 +124,10 @@ $letters-name: (
     text-align: center;
     background-color: $bgc-secondary;
 
+    @include tablet {
+        padding-top: 3rem;
+    }
+
     & h1 {
         width: 62%;
         line-height: 1.7rem;
@@ -151,6 +155,10 @@ $letters-name: (
 .manual {
     & h2 {
         margin: 3rem 0 2rem 1.5rem;
+
+        @include tablet {
+            margin-left: 5rem;
+        }
     }
 
     &__site {
@@ -164,6 +172,11 @@ $letters-name: (
             align-items: center;
             @include menu-accueil();
             color: #000;
+
+            @include tablet {
+                width: 55%;
+                justify-content: center;
+            }
 
             &:hover {
                 background: rgba(255, 121, 218, 0.15);
@@ -198,11 +211,19 @@ $letters-name: (
     margin: 4rem 0 0 0;
     padding: 3rem 1rem;
 
+    @include tablet {
+        padding: 3rem 6rem;
+    }
+
     &__card {
         position: relative;
         border-radius: 1.2rem;
         overflow: hidden;
         margin: 1rem 0;
+
+        @include tablet {
+            margin: 3rem 0;
+        }
 
         &-link {
             text-decoration: none;

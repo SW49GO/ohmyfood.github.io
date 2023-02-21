@@ -3,6 +3,10 @@
     position: absolute;
     top: 1.7rem;
     left: 1rem;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
 }
 
 /*Pictures of each menus*/
@@ -29,6 +33,11 @@
         padding: 1.5rem 0 0.5rem 1rem;
         top: -74px;
         background-color: $bgc-secondary;
+
+        @include tablet {
+            padding-left: 4rem;
+            font-size: 2rem;
+        }
     }
 
     &__heart {
@@ -38,6 +47,10 @@
         top: -2.5rem;
         right: 1.5rem;
         z-index: 1;
+
+        @include tablet {
+            right: 5.5rem;
+        }
 
         & img {
             @include pictures();
@@ -50,6 +63,10 @@
     height: 75rem;
     background-color: $bgc-secondary;
 
+    @include tablet {
+        height: 85rem;
+    }
+
     &__btn {
         @include buttons();
         display: block;
@@ -59,6 +76,11 @@
         margin: 2rem auto;
         // Appearance of the "Order" button (opacity 0->1)
         animation: appear-group-menu 0.5s 6.5s ease-in-out forwards;
+
+        @include tablet {
+            margin: 3rem auto;
+            font-size: 1rem;
+        }
 
         &:hover {
             @include buttons-hover();
@@ -85,6 +107,10 @@ $menusChoice: 1, 2, 3;
             font-weight: normal;
             text-transform: uppercase;
             padding: 1.5rem 0 0 1.5rem;
+
+            @include tablet {
+                padding-top: 2.5rem;
+            }
         }
 
         /*Underline title*/
@@ -127,6 +153,11 @@ $menusChoice: 1, 2, 3;
             background-color: #fff;
             padding-left: 1rem;
             opacity: 0;
+
+            @include tablet {
+                width: 80%;
+                margin: 1rem auto;
+            }
 
             /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
 
@@ -177,6 +208,10 @@ $menusChoice: 1, 2, 3;
                 width: 100%;
                 line-height: 1.8rem;
                 padding-bottom: 0.2rem;
+
+                @include tablet {
+                    margin-left: 1.5rem;
+                }
             }
 
             & .check-choice {
@@ -214,6 +249,10 @@ $menusChoice: 1, 2, 3;
                 width: 18.7rem;
                 height: 5.5rem;
                 margin-right: 1.5rem;
+
+                @include tablet {
+                    width: 47.5rem;
+                }
             }
 
             // Sélectionne le 5ème frère du parent de <input> -> .check-choice
@@ -248,6 +287,10 @@ $menusChoice: 1, 2, 3;
                 display: flex;
                 justify-content: space-between;
                 font-size: 0.98rem;
+
+                @include tablet {
+                    margin-left: 1.5rem;
+                }
 
                 & p {
                     display: inline-block;
