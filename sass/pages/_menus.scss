@@ -23,17 +23,12 @@
     height: 17rem;
 
     @include desktop {
-        width: 80%;
         height: 26rem;
         margin: 0 auto;
     }
 
     & img {
         @include pictures();
-
-        @include desktop {
-            border-radius: 4rem;
-        }
     }
 }
 
@@ -50,7 +45,7 @@
         font-size: 1.8rem;
         font-weight: normal;
         padding: 1.5rem 0 0.5rem 1rem;
-        top: -74px;
+        top: -4.62rem;
         background-color: $bgc-secondary;
 
         @include tablet {
@@ -62,6 +57,7 @@
             padding-left: 10%;
             border-radius: 100px 100px 0 0;
             font-size: 2.5rem;
+            top: -5.6rem;
         }
     }
 
@@ -139,6 +135,7 @@ $menusChoice: 1, 2, 3;
     /*The 3 differents menus*/
     .menus__#{$menu} {
         opacity: 0;
+        border: 1px solid $tertiary-color;
 
         @include desktop {
             padding-left: 12%;

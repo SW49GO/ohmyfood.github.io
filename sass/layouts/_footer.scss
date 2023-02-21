@@ -7,7 +7,11 @@ footer {
         font-family: $secondary-font;
         font-weight: normal;
         margin-bottom: 1rem;
-        color: #fff
+        color: #fff;
+
+        @include desktop {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -24,6 +28,7 @@ ul {
     @include desktop {
         display: flex;
         justify-content: space-around;
+        font-size: 1rem;
         padding: 1rem 0 2rem;
         width: 70%;
         margin: 0 auto;

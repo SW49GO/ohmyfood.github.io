@@ -43,6 +43,11 @@ footer h3 {
   margin-bottom: 1rem;
   color: #fff;
 }
+@media screen and (min-width: 992px) {
+  footer h3 {
+    font-size: 1.5rem;
+  }
+}
 
 ul {
   padding-left: 0;
@@ -59,6 +64,7 @@ ul {
   ul {
     display: flex;
     justify-content: space-around;
+    font-size: 1rem;
     padding: 1rem 0 2rem;
     width: 70%;
     margin: 0 auto;
@@ -106,7 +112,6 @@ ul li:first-child i {
 }
 @media screen and (min-width: 992px) {
   .menu-image {
-    width: 80%;
     height: 26rem;
     margin: 0 auto;
   }
@@ -115,11 +120,6 @@ ul li:first-child i {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-@media screen and (min-width: 992px) {
-  .menu-image img {
-    border-radius: 4rem;
-  }
 }
 
 /*Title of the menu + Heart*/
@@ -135,7 +135,7 @@ ul li:first-child i {
   font-size: 1.8rem;
   font-weight: normal;
   padding: 1.5rem 0 0.5rem 1rem;
-  top: -74px;
+  top: -4.62rem;
   background-color: #f7f7f7;
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -149,6 +149,7 @@ ul li:first-child i {
     padding-left: 10%;
     border-radius: 100px 100px 0 0;
     font-size: 2.5rem;
+    top: -5.6rem;
   }
 }
 .title-menu__heart {
@@ -225,6 +226,7 @@ ul li:first-child i {
 /*The 3 differents menus*/
 .menus__starters {
   opacity: 0;
+  border: 1px solid #99E2D0;
   /*Underline title*/
   /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
   animation: appear-group-menu 1s 0.5s ease-in-out forwards;
@@ -730,6 +732,7 @@ ul li:first-child i {
 /*The 3 differents menus*/
 .menus__dishes {
   opacity: 0;
+  border: 1px solid #99E2D0;
   /*Underline title*/
   /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
   animation: appear-group-menu 1s 2s ease-in-out forwards;
@@ -1235,6 +1238,7 @@ ul li:first-child i {
 /*The 3 differents menus*/
 .menus__desserts {
   opacity: 0;
+  border: 1px solid #99E2D0;
   /*Underline title*/
   /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
   animation: appear-group-menu 1s 4.5s ease-in-out forwards;
@@ -2163,7 +2167,7 @@ ul li:first-child i {
 }
 @media screen and (min-width: 992px) {
   .restaurants__card {
-    width: 25rem;
+    width: 28rem;
     justify-self: center;
   }
 }
