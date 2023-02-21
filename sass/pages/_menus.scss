@@ -59,9 +59,9 @@
         }
 
         @include desktop {
-            padding-left: 10%;
             border-radius: 100px 100px 0 0;
             font-size: 2.5rem;
+            padding-left: 10%;
         }
     }
 
@@ -98,6 +98,7 @@
 
     @include desktop {
         height: 100rem;
+        padding-top: 2rem;
     }
 
     &__btn {
@@ -141,7 +142,27 @@ $menusChoice: 1, 2, 3;
         opacity: 0;
 
         @include desktop {
-            padding-left: 12%;
+            $color: transparent;
+
+            @if $menu ==starters {
+                $color: $tertiary-color;
+            }
+
+            @else if $menu ==dishes {
+                $color: $secondary-color;
+            }
+
+            @else {
+                $color: $primary-color;
+            }
+
+            padding-left: 5%;
+            border: 2px solid $color;
+            transform: skewX(25deg);
+            margin: 0 auto 2rem;
+            box-shadow: 5px 6px 9px 4px $color;
+            width: 60%;
+            background-color: rgba($color, 0.1);
         }
 
         &-title {
@@ -157,6 +178,7 @@ $menusChoice: 1, 2, 3;
             @include desktop {
                 font-size: 1.5rem;
                 padding-top: 3.5rem;
+                transform: skewX(-25deg);
             }
 
         }
@@ -233,7 +255,8 @@ $menusChoice: 1, 2, 3;
             }
 
             @include desktop {
-                width: 55%;
+                width: 65%;
+                transform: skewX(-25deg);
 
                 @if $choice ==1 {
                     margin: 1rem 0 1.5rem 10%;
