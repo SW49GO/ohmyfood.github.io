@@ -146,10 +146,9 @@ ul li:first-child i {
 }
 @media screen and (min-width: 992px) {
   .title-menu__name {
-    padding-left: 10%;
     border-radius: 100px 100px 0 0;
     font-size: 2.5rem;
-    top: -5.6rem;
+    padding-left: 10%;
   }
 }
 .title-menu__heart {
@@ -188,7 +187,8 @@ ul li:first-child i {
 }
 @media screen and (min-width: 992px) {
   .menus {
-    height: 100rem;
+    height: 101rem;
+    padding-top: 2rem;
   }
 }
 .menus__btn {
@@ -226,7 +226,6 @@ ul li:first-child i {
 /*The 3 differents menus*/
 .menus__starters {
   opacity: 0;
-  border: 1px solid #99E2D0;
   /*Underline title*/
   /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
   animation: appear-group-menu 1s 0.5s ease-in-out forwards;
@@ -732,7 +731,6 @@ ul li:first-child i {
 /*The 3 differents menus*/
 .menus__dishes {
   opacity: 0;
-  border: 1px solid #99E2D0;
   /*Underline title*/
   /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
   animation: appear-group-menu 1s 2s ease-in-out forwards;
@@ -1238,7 +1236,6 @@ ul li:first-child i {
 /*The 3 differents menus*/
 .menus__desserts {
   opacity: 0;
-  border: 1px solid #99E2D0;
   /*Underline title*/
   /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
   animation: appear-group-menu 1s 4.5s ease-in-out forwards;
