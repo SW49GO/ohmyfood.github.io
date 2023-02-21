@@ -207,6 +207,26 @@ $menusChoice: 1, 2, 3;
             padding-left: 1rem;
             opacity: 0;
 
+            &:hover {
+                & .check-choice {
+                    @include desktop {
+                        animation: appear-checkbox 1s 0.1s ease forwards;
+                    }
+
+                    &>:nth-child(1) {
+                        animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+                    }
+                }
+
+                & h3 {
+                    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+                }
+
+                & .menus__#{$menu}-choice#{$choice}__name .price {
+                    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+                }
+            }
+
             @include tablet {
                 width: 80%;
                 margin: 1rem auto;
