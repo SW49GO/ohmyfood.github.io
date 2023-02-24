@@ -280,6 +280,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -293,14 +294,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__starters-choice1:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice1:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__starters-choice1:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice1:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__starters-choice1:hover .menus__starters-choice1__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice1:hover .menus__starters-choice1__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__starters-choice1 {
@@ -434,6 +441,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -447,14 +455,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__starters-choice2:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice2:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__starters-choice2:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice2:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__starters-choice2:hover .menus__starters-choice2__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice2:hover .menus__starters-choice2__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__starters-choice2 {
@@ -588,6 +602,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -601,14 +616,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__starters-choice3:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice3:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__starters-choice3:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice3:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__starters-choice3:hover .menus__starters-choice3__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__starters-choice3:hover .menus__starters-choice3__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__starters-choice3 {
@@ -785,6 +806,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -798,14 +820,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__dishes-choice1:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice1:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__dishes-choice1:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice1:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__dishes-choice1:hover .menus__dishes-choice1__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice1:hover .menus__dishes-choice1__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__dishes-choice1 {
@@ -939,6 +967,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -952,14 +981,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__dishes-choice2:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice2:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__dishes-choice2:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice2:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__dishes-choice2:hover .menus__dishes-choice2__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice2:hover .menus__dishes-choice2__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__dishes-choice2 {
@@ -1093,6 +1128,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -1106,14 +1142,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__dishes-choice3:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice3:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__dishes-choice3:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice3:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__dishes-choice3:hover .menus__dishes-choice3__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__dishes-choice3:hover .menus__dishes-choice3__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__dishes-choice3 {
@@ -1290,6 +1332,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -1303,14 +1346,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__desserts-choice1:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice1:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__desserts-choice1:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice1:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__desserts-choice1:hover .menus__desserts-choice1__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice1:hover .menus__desserts-choice1__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__desserts-choice1 {
@@ -1444,6 +1493,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -1457,14 +1507,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__desserts-choice2:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice2:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__desserts-choice2:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice2:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__desserts-choice2:hover .menus__desserts-choice2__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice2:hover .menus__desserts-choice2__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__desserts-choice2 {
@@ -1598,6 +1654,7 @@ ul li:first-child i {
   background-color: #fff;
   padding-left: 1rem;
   opacity: 0;
+  /*Animations on hover for Desktop*/
   /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
   animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
   /*Resizing of the clickable part*/
@@ -1611,14 +1668,20 @@ ul li:first-child i {
     animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
-.menus__desserts-choice3:hover .check-choice > :nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice3:hover .check-choice > :nth-child(1) {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
 }
-.menus__desserts-choice3:hover h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice3:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
 }
-.menus__desserts-choice3:hover .menus__desserts-choice3__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+@media screen and (min-width: 992px) {
+  .menus__desserts-choice3:hover .menus__desserts-choice3__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__desserts-choice3 {

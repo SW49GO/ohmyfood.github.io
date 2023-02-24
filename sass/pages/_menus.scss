@@ -204,6 +204,7 @@ $menusChoice: 1, 2, 3;
             padding-left: 1rem;
             opacity: 0;
 
+            /*Animations on hover for Desktop*/
             &:hover {
                 & .check-choice {
                     @include desktop {
@@ -211,16 +212,22 @@ $menusChoice: 1, 2, 3;
                     }
 
                     &>:nth-child(1) {
-                        animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+                        @include desktop {
+                            animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+                        }
                     }
                 }
 
                 & h3 {
-                    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+                    @include desktop {
+                        animation: deplace-submenu-title 0.5s ease-in-out forwards;
+                    }
                 }
 
                 & .menus__#{$menu}-choice#{$choice}__name .price {
-                    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+                    @include desktop {
+                        animation: deplace-submenu-price 0.5s ease-in-out forwards;
+                    }
                 }
             }
 
@@ -231,7 +238,6 @@ $menusChoice: 1, 2, 3;
 
             @include desktop {
                 width: 55%;
-                // transform: skewX(-25deg);
 
                 @if $choice ==1 {
                     margin: 1rem 0 1.5rem 10%;
