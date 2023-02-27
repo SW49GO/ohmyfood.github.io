@@ -16,8 +16,14 @@ header {
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 16rem;
   }
 }
@@ -29,7 +35,8 @@ header {
 .logo__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*Footer*/
@@ -55,15 +62,25 @@ ul {
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     padding: 1rem 0 2rem;
   }
 }
 @media screen and (min-width: 992px) {
   ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     font-size: 1rem;
     padding: 1rem 0 2rem;
     width: 70%;
@@ -72,8 +89,14 @@ ul {
 }
 
 ul li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   line-height: 2rem;
   color: #fff;
@@ -119,7 +142,8 @@ ul li:first-child i {
 .menu-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*Title of the menu + Heart*/
@@ -172,7 +196,8 @@ ul li:first-child i {
 .title-menu__heart img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*Implementation of the form menus*/
@@ -195,16 +220,20 @@ ul li:first-child i {
   text-decoration: none;
   padding: 1rem 1.1rem;
   border-radius: 1.5rem;
-  box-shadow: 0px 6px 20px -6px #6a686a;
+  -webkit-box-shadow: 0px 6px 20px -6px #6a686a;
+          box-shadow: 0px 6px 20px -6px #6a686a;
   color: #fff;
   background: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: -o-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   display: block;
   opacity: 0;
   border: none;
   padding: 1rem 3rem;
   margin: 2rem auto;
-  animation: appear-group-menu 0.5s 6.5s ease-in-out forwards;
+  -webkit-animation: appear-group-menu 0.5s 6.5s ease-in-out forwards;
+          animation: appear-group-menu 0.5s 6.5s ease-in-out forwards;
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .menus__btn {
@@ -219,8 +248,11 @@ ul li:first-child i {
   }
 }
 .menus__btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9de4), to(#9356DC));
+  background: -o-linear-gradient(top, #ff9de4 0%, #9356DC 100%);
   background: linear-gradient(to bottom, #ff9de4 0%, #9356DC 100%);
-  box-shadow: 0px 7px 25px -4px #585658;
+  -webkit-box-shadow: 0px 7px 25px -4px #585658;
+          box-shadow: 0px 7px 25px -4px #585658;
 }
 
 /*The groups menus Starters, Dishes & Desserts*/
@@ -264,14 +296,25 @@ ul li:first-child i {
   }
 }
 .menus__groups .menus__groups-choice {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   width: 90%;
   height: 5.6rem;
   border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  -webkit-box-shadow: 0px 2px 13px -5px #d0d0d0;
+          box-shadow: 0px 2px 13px -5px #d0d0d0;
   overflow: hidden;
   margin: 0.5rem auto;
   background-color: #fff;
@@ -288,7 +331,8 @@ ul li:first-child i {
 .menus__groups .menus__groups-choice h3 {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   width: 100%;
   line-height: 1.8rem;
   padding-bottom: 0.2rem;
@@ -343,20 +387,30 @@ ul li:first-child i {
   }
 }
 .menus__groups .menus__groups-choice input[type=checkbox]:checked ~ .check-choice {
-  animation: appear-checkbox 1s 0.1s ease forwards;
+  -webkit-animation: appear-checkbox 1s 0.1s ease forwards;
+          animation: appear-checkbox 1s 0.1s ease forwards;
 }
 .menus__groups .menus__groups-choice input[type=checkbox]:checked ~ .check-choice > .fa-circle-check {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  -webkit-animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+          animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
 }
 .menus__groups .menus__groups-choice input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  -webkit-animation: deplace-submenu-title 0.5s ease-in-out forwards;
+          animation: deplace-submenu-title 0.5s ease-in-out forwards;
 }
 .menus__groups .menus__groups-choice input[type=checkbox]:checked ~ h3 ~ .menus__groups-choice__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  -webkit-animation: deplace-submenu-price 0.5s ease-in-out forwards;
+          animation: deplace-submenu-price 0.5s ease-in-out forwards;
 }
 .menus__groups .menus__groups-choice__name {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 0.98rem;
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -376,7 +430,8 @@ ul li:first-child i {
   width: 83%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .menus__groups .menus__groups-choice__name .description:hover {
   overflow: visible;
@@ -391,22 +446,26 @@ ul li:first-child i {
 }
 @media screen and (min-width: 992px) {
   .menus__groups .menus__groups-choice:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
+    -webkit-animation: appear-checkbox 1s 0.1s ease forwards;
+            animation: appear-checkbox 1s 0.1s ease forwards;
   }
 }
 @media screen and (min-width: 992px) {
   .menus__groups .menus__groups-choice:hover .check-choice .fa-circle-check {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+    -webkit-animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+            animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
   }
 }
 @media screen and (min-width: 992px) {
   .menus__groups .menus__groups-choice:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+    -webkit-animation: deplace-submenu-title 0.5s ease-in-out forwards;
+            animation: deplace-submenu-title 0.5s ease-in-out forwards;
   }
 }
 @media screen and (min-width: 992px) {
   .menus__groups .menus__groups-choice:hover .menus__groups-choice__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+    -webkit-animation: deplace-submenu-price 0.5s ease-in-out forwards;
+            animation: deplace-submenu-price 0.5s ease-in-out forwards;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
@@ -423,7 +482,8 @@ ul li:first-child i {
 
 /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
 .anim-starters {
-  animation: appear-group-menu 1s 0.5s ease-in-out forwards;
+  -webkit-animation: appear-group-menu 1s 0.5s ease-in-out forwards;
+          animation: appear-group-menu 1s 0.5s ease-in-out forwards;
 }
 @media screen and (min-width: 992px) {
   .anim-starters .anim-starters1 {
@@ -438,7 +498,8 @@ ul li:first-child i {
 }
 
 .anim-dishes {
-  animation: appear-group-menu 1s 2s ease-in-out forwards;
+  -webkit-animation: appear-group-menu 1s 2s ease-in-out forwards;
+          animation: appear-group-menu 1s 2s ease-in-out forwards;
 }
 @media screen and (min-width: 992px) {
   .anim-dishes .anim-dishes1 {
@@ -453,7 +514,8 @@ ul li:first-child i {
 }
 
 .anim-desserts {
-  animation: appear-group-menu 1s 4.5s ease-in-out forwards;
+  -webkit-animation: appear-group-menu 1s 4.5s ease-in-out forwards;
+          animation: appear-group-menu 1s 4.5s ease-in-out forwards;
 }
 @media screen and (min-width: 992px) {
   .anim-desserts .anim-desserts1 {
@@ -469,39 +531,57 @@ ul li:first-child i {
 
 /*Animation of each submenu*/
 .anim-starters1 {
-  animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
 }
 
 .anim-starters2 {
-  animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
 }
 
 .anim-starters3 {
-  animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
 }
 
 .anim-dishes1 {
-  animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
 }
 
 .anim-dishes2 {
-  animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
 }
 
 .anim-dishes3 {
-  animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
 }
 
 .anim-desserts1 {
-  animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
 }
 
 .anim-desserts2 {
-  animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
 }
 
 .anim-desserts3 {
-  animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
+  -webkit-animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
+          animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
+}
+
+@-webkit-keyframes appear-group-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes appear-group-menu {
@@ -510,6 +590,16 @@ ul li:first-child i {
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes appear-submenu-choice {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 5.6rem;
   }
 }
 @keyframes appear-submenu-choice {
@@ -522,6 +612,14 @@ ul li:first-child i {
     height: 5.6rem;
   }
 }
+@-webkit-keyframes appear-checkbox {
+  from {
+    right: -4.3rem;
+  }
+  to {
+    right: -0.3rem;
+  }
+}
 @keyframes appear-checkbox {
   from {
     right: -4.3rem;
@@ -530,12 +628,32 @@ ul li:first-child i {
     right: -0.3rem;
   }
 }
-@keyframes rotate-icon-checkbox {
+@-webkit-keyframes rotate-icon-checkbox {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-icon-checkbox {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes deplace-submenu-title {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 75%;
   }
 }
 @keyframes deplace-submenu-title {
@@ -544,6 +662,14 @@ ul li:first-child i {
   }
   to {
     width: 75%;
+  }
+}
+@-webkit-keyframes deplace-submenu-price {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 3.7rem;
   }
 }
 @keyframes deplace-submenu-price {
@@ -555,32 +681,56 @@ ul li:first-child i {
   }
 }
 .spinner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 5;
   background-color: #fff;
-  animation: appear-spinner 500ms 2s ease forwards;
+  -webkit-animation: appear-spinner 500ms 2s ease forwards;
+          animation: appear-spinner 500ms 2s ease forwards;
 }
 .spinner__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .spinner__container__letters {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   font-size: 1.2rem;
   width: 9.3rem;
   height: 9.3rem;
   border-radius: 50%;
-  box-shadow: 6px 6px 5px 0px rgba(153, 226, 208, 0.75) inset;
-  animation: rotate-spinner 0.6s ease-in-out 3;
+  -webkit-box-shadow: 6px 6px 5px 0px rgba(153, 226, 208, 0.75) inset;
+          box-shadow: 6px 6px 5px 0px rgba(153, 226, 208, 0.75) inset;
+  -webkit-animation: rotate-spinner 0.6s ease-in-out 3;
+          animation: rotate-spinner 0.6s ease-in-out 3;
 }
 .spinner__container__letters span {
   display: block;
@@ -600,10 +750,23 @@ ul li:first-child i {
 .spinner__container__letters img {
   width: 50%;
   height: 50%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   top: 2.75rem;
-  animation: fork-knife 0.6s alternate 3;
+  -webkit-animation: fork-knife 0.6s alternate 3;
+          animation: fork-knife 0.6s alternate 3;
+}
+
+@-webkit-keyframes appear-spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+    z-index: -10;
+  }
 }
 
 @keyframes appear-spinner {
@@ -616,27 +779,53 @@ ul li:first-child i {
     z-index: -10;
   }
 }
-@keyframes rotate-spinner {
+@-webkit-keyframes rotate-spinner {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fork-knife {
+  from {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 @keyframes fork-knife {
   from {
-    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
   }
   to {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 .l1 {
   font-weight: bold;
   position: absolute;
-  transform-origin: top left;
-  transform: rotate(289deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(289deg);
+          transform: rotate(289deg);
   top: 3.8rem;
   left: -0.12rem;
   color: #9356DC;
@@ -645,8 +834,10 @@ ul li:first-child i {
 .l2 {
   font-weight: bold;
   position: absolute;
-  transform-origin: top left;
-  transform: rotate(300deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(300deg);
+          transform: rotate(300deg);
   top: 2.68rem;
   left: 0.25rem;
   color: #FF79DA;
@@ -655,8 +846,10 @@ ul li:first-child i {
 .l3 {
   font-weight: bold;
   position: absolute;
-  transform-origin: top left;
-  transform: rotate(317deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(317deg);
+          transform: rotate(317deg);
   top: 1.5rem;
   left: 1rem;
   color: #9356DC;
@@ -665,8 +858,10 @@ ul li:first-child i {
 .l4 {
   font-weight: bold;
   position: absolute;
-  transform-origin: top left;
-  transform: rotate(335deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(335deg);
+          transform: rotate(335deg);
   top: 0.5rem;
   left: 2.18rem;
   color: #FF79DA;
@@ -675,8 +870,10 @@ ul li:first-child i {
 .l5 {
   font-weight: bold;
   position: absolute;
-  transform-origin: top left;
-  transform: rotate(349deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(349deg);
+          transform: rotate(349deg);
   top: 0rem;
   left: 3.43rem;
   color: #9356DC;
@@ -685,8 +882,10 @@ ul li:first-child i {
 .l6 {
   font-weight: bold;
   position: absolute;
-  transform-origin: top left;
-  transform: rotate(7deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
   top: -0.25rem;
   left: 4.62rem;
   color: #FF79DA;
@@ -695,8 +894,10 @@ ul li:first-child i {
 .l7 {
   font-weight: bold;
   position: absolute;
-  transform-origin: top left;
-  transform: rotate(27deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(27deg);
+          transform: rotate(27deg);
   top: 0.06rem;
   left: 6.06rem;
   color: #9356DC;
@@ -705,8 +906,10 @@ ul li:first-child i {
 .l8 {
   font-weight: bold;
   position: absolute;
-  transform-origin: top left;
-  transform: rotate(37deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(37deg);
+          transform: rotate(37deg);
   top: 0.56rem;
   left: 7.25rem;
   color: #FF79DA;
@@ -714,11 +917,18 @@ ul li:first-child i {
 
 /*Future form allowing you to indicate the location of your choice*/
 .location {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #eeecec;
   padding: 1.2rem;
-  box-shadow: inset 0px 18px 21px -25px #6a686a;
+  -webkit-box-shadow: inset 0px 18px 21px -25px #6a686a;
+          box-shadow: inset 0px 18px 21px -25px #6a686a;
 }
 @media screen and (min-width: 992px) {
   .location {
@@ -736,12 +946,44 @@ ul li:first-child i {
     width: 10rem;
   }
 }
+.location ::-webkit-input-placeholder {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+}
+.location ::-moz-placeholder {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+}
+.location :-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+}
+.location ::-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+}
 .location ::placeholder {
   font-weight: 700;
   font-size: 1rem;
   color: #000;
 }
 @media screen and (min-width: 992px) {
+  .location ::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+  .location ::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  .location :-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  .location ::-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
   .location ::placeholder {
     font-size: 1.2rem;
   }
@@ -779,14 +1021,20 @@ ul li:first-child i {
   text-decoration: none;
   padding: 1rem 1.1rem;
   border-radius: 1.5rem;
-  box-shadow: 0px 6px 20px -6px #6a686a;
+  -webkit-box-shadow: 0px 6px 20px -6px #6a686a;
+          box-shadow: 0px 6px 20px -6px #6a686a;
   color: #fff;
   background: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: -o-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 }
 .presentation__btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9de4), to(#9356DC));
+  background: -o-linear-gradient(top, #ff9de4 0%, #9356DC 100%);
   background: linear-gradient(to bottom, #ff9de4 0%, #9356DC 100%);
-  box-shadow: 0px 7px 25px -4px #585658;
+  -webkit-box-shadow: 0px 7px 25px -4px #585658;
+          box-shadow: 0px 7px 25px -4px #585658;
 }
 
 /*Site User Manual*/
@@ -810,26 +1058,52 @@ ul li:first-child i {
   }
 }
 .manual__site {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (min-width: 992px) {
   .manual__site {
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .manual__site__item {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   padding: 1rem 1.1rem;
   border-radius: 1.5rem;
-  box-shadow: 0px 6px 20px -6px #6a686a;
+  -webkit-box-shadow: 0px 6px 20px -6px #6a686a;
+          box-shadow: 0px 6px 20px -6px #6a686a;
   color: #fff;
   background: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: -o-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   color: inherit;
   background: 0;
@@ -842,7 +1116,10 @@ ul li:first-child i {
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .manual__site__item {
     width: 55%;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 992px) {
@@ -905,7 +1182,10 @@ ul li:first-child i {
     display: grid;
     grid-template-columns: repeat(2, 28rem);
     gap: 3rem;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1rem 0 4rem 0;
   }
 }
@@ -954,7 +1234,8 @@ ul li:first-child i {
 .restaurants__card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .restaurants__card-name {
   line-height: 1.5rem;
@@ -987,7 +1268,8 @@ ul li:first-child i {
 .restaurants__card-fav-icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .restaurants__card-fav-icon::after {
   content: "";
@@ -1000,12 +1282,15 @@ ul li:first-child i {
   height: 1.6rem;
   top: 0;
   right: 0;
+  -webkit-transition: opacity 800ms cubic-bezier(0.84, 0.03, 0.36, 1.04);
+  -o-transition: opacity 800ms cubic-bezier(0.84, 0.03, 0.36, 1.04);
   transition: opacity 800ms cubic-bezier(0.84, 0.03, 0.36, 1.04);
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }/*# sourceMappingURL=style.css.map */
