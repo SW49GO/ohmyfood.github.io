@@ -1200,8 +1200,8 @@ ul li:first-child i {
   border-radius: 1.2rem;
   overflow: hidden;
   margin: 1rem 0;
-  /* Implementation of a checkbox to click on the heart*/
   /*Empty heart positioning*/
+  /* Implementation of a checkbox to click on the heart*/
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
   .restaurants__card {
@@ -1242,26 +1242,6 @@ ul li:first-child i {
   background-color: #fff;
   padding: 1rem;
 }
-.restaurants__card-fav-checkbox {
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  opacity: 0;
-  bottom: 2rem;
-  right: 1.5rem;
-  z-index: 2;
-  /*Appearance of the full heart when checked*/
-}
-.restaurants__card-fav-checkbox:checked + .restaurants__card-fav-icon::after {
-  opacity: 1;
-  cursor: pointer;
-}
-@media screen and (min-width: 992px) {
-  .restaurants__card-fav-checkbox:hover + .restaurants__card-fav-icon::after {
-    opacity: 1;
-    cursor: pointer;
-  }
-}
 .restaurants__card-fav-icon {
   position: absolute;
   top: 12.5rem;
@@ -1291,6 +1271,26 @@ ul li:first-child i {
   -webkit-transition: opacity 800ms cubic-bezier(0.84, 0.03, 0.36, 1.04);
   -o-transition: opacity 800ms cubic-bezier(0.84, 0.03, 0.36, 1.04);
   transition: opacity 800ms cubic-bezier(0.84, 0.03, 0.36, 1.04);
+}
+.restaurants__card-fav-checkbox {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0;
+  bottom: 2rem;
+  right: 1.5rem;
+  z-index: 2;
+  /*Appearance of the full heart when checked*/
+}
+.restaurants__card-fav-checkbox:checked + .restaurants__card-fav-icon::after {
+  opacity: 1;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card-fav-checkbox:hover + .restaurants__card-fav-icon::after {
+    opacity: 1;
+    cursor: pointer;
+  }
 }
 
 * {

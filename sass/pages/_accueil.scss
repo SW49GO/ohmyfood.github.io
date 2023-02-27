@@ -326,31 +326,6 @@ $letters-name: (
             padding: 1rem;
         }
 
-        /* Implementation of a checkbox to click on the heart*/
-        &-fav-checkbox {
-            position: absolute;
-            width: 1.5rem;
-            height: 1.5rem;
-            opacity: 0;
-            bottom: 2rem;
-            right: 1.5rem;
-            z-index: 2;
-
-            // When chexbok is checked -> appear over the ::after of the fav-icon
-            /*Appearance of the full heart when checked*/
-            &:checked+.restaurants__card-fav-icon::after {
-                opacity: 1;
-                cursor: pointer;
-            }
-
-            &:hover+.restaurants__card-fav-icon::after {
-                @include desktop {
-                    opacity: 1;
-                    cursor: pointer;
-                }
-            }
-        }
-
         /*Empty heart positioning*/
         &-fav-icon {
             position: absolute;
@@ -378,8 +353,31 @@ $letters-name: (
                 right: 0;
                 transition: opacity 800ms cubic-bezier(0.84, 0.03, 0.36, 1.04);
             }
-
         }
 
+        /* Implementation of a checkbox to click on the heart*/
+        &-fav-checkbox {
+            position: absolute;
+            width: 1.5rem;
+            height: 1.5rem;
+            opacity: 0;
+            bottom: 2rem;
+            right: 1.5rem;
+            z-index: 2;
+
+            // When chexbok is checked -> appear over the ::after of the fav-icon
+            /*Appearance of the full heart when checked*/
+            &:checked+.restaurants__card-fav-icon::after {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+            &:hover+.restaurants__card-fav-icon::after {
+                @include desktop {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
