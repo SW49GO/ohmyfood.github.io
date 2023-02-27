@@ -1260,7 +1260,7 @@ ul li:first-child i {
 .restaurants__card-fav-icon::after {
   content: "";
   position: absolute;
-  background-image: url("https: //sw49go.github.io/ohmyfood.github.io/images/heart/heart-regular-full.png");
+  background-image: url("../images/heart/heart-regular-full.png");
   background-repeat: no-repeat;
   background-size: 100%;
   opacity: 0;
