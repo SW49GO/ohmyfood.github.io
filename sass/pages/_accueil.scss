@@ -342,6 +342,13 @@ $letters-name: (
                 opacity: 1;
                 cursor: pointer;
             }
+
+            &:hover+.restaurants__card-fav-icon::after {
+                @include desktop {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
         }
 
         /*Empty heart positioning*/

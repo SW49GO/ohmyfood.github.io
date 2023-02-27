@@ -1256,6 +1256,12 @@ ul li:first-child i {
   opacity: 1;
   cursor: pointer;
 }
+@media screen and (min-width: 992px) {
+  .restaurants__card-fav-checkbox:hover + .restaurants__card-fav-icon::after {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
 .restaurants__card-fav-icon {
   position: absolute;
   top: 12.5rem;
