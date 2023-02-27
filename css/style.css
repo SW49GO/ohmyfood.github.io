@@ -126,7 +126,7 @@ ul li:first-child i {
 .title-menu {
   position: relative;
 }
-.title-menu__name {
+.title-menu h1 {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -139,13 +139,13 @@ ul li:first-child i {
   background-color: #f7f7f7;
 }
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .title-menu__name {
+  .title-menu h1 {
     padding-left: 4rem;
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .title-menu__name {
+  .title-menu h1 {
     border-radius: 100px 100px 0 0;
     font-size: 2.5rem;
     padding-left: 10%;
@@ -175,7 +175,7 @@ ul li:first-child i {
   object-fit: cover;
 }
 
-/*Implementation of the differents menus*/
+/*Implementation of the form menus*/
 .menus {
   height: 75rem;
   background-color: #f7f7f7;
@@ -223,1582 +223,285 @@ ul li:first-child i {
   box-shadow: 0px 7px 25px -4px #585658;
 }
 
-/*The 3 differents menus*/
-.menus__starters {
+/*The groups menus Starters, Dishes & Desserts*/
+.menus__groups {
   opacity: 0;
   /*Underline title*/
-  /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
+  /*The differents choices*/
+}
+@media screen and (min-width: 992px) {
+  .menus__groups {
+    padding-left: 12%;
+  }
+}
+.menus__groups h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 1.5rem 0 0 1.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__groups h2 {
+    padding-top: 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus__groups h2 {
+    font-size: 1.5rem;
+    padding-top: 3.5rem;
+  }
+}
+.menus__groups span {
+  display: block;
+  width: 3rem;
+  border: 2px solid #99E2D0;
+  margin: 0.3rem 0 1rem 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .menus__groups span {
+    width: 4rem;
+    margin-bottom: 2.5rem;
+  }
+}
+.menus__groups .menus__groups-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 5.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0px 2px 13px -5px #d0d0d0;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  background-color: #fff;
+  padding-left: 1rem;
+  opacity: 0;
+  /*The checkbox that appear*/
+  /*Resizing of the clickable part*/
+  /*Appearance of the confirmation of the choice*/
+  /*Rotation of the icon in the checkbox*/
+  /*Decreasing the size of the submenu title*/
+  /*Submenu price shift to the left*/
+  /*Animations on hover for Desktop*/
+}
+.menus__groups .menus__groups-choice h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__groups .menus__groups-choice h3 {
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus__groups .menus__groups-choice h3 {
+    font-size: 1.5rem;
+  }
+}
+.menus__groups .menus__groups-choice .check-choice {
+  position: absolute;
+  text-align: center;
+  line-height: 0.6rem;
+  width: 4.3rem;
+  height: 5.8rem;
+  top: -0.1rem;
+  right: -4.3rem;
+  background-color: #99E2D0;
+}
+.menus__groups .menus__groups-choice .check-choice > .fa-circle-check {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 5.5rem;
+  padding-right: 0.2rem;
+}
+.menus__groups .menus__groups-choice input[type=checkbox] {
+  position: absolute;
+  width: 5.6rem;
+  height: 5.6rem;
+  opacity: 0;
+}
+.menus__groups .menus__groups-choice input[type=checkbox] + label {
+  position: absolute;
+  top: 0;
+  width: 18.7rem;
+  height: 5.5rem;
+  margin-right: 1.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__groups .menus__groups-choice input[type=checkbox] + label {
+    width: 47.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus__groups .menus__groups-choice input[type=checkbox] + label {
+    width: 51rem;
+  }
+}
+.menus__groups .menus__groups-choice input[type=checkbox]:checked ~ .check-choice {
+  animation: appear-checkbox 1s 0.1s ease forwards;
+}
+.menus__groups .menus__groups-choice input[type=checkbox]:checked ~ .check-choice > .fa-circle-check {
+  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+}
+.menus__groups .menus__groups-choice input[type=checkbox]:checked ~ h3 {
+  animation: deplace-submenu-title 0.5s ease-in-out forwards;
+}
+.menus__groups .menus__groups-choice input[type=checkbox]:checked ~ h3 ~ .menus__groups-choice__name .price {
+  animation: deplace-submenu-price 0.5s ease-in-out forwards;
+}
+.menus__groups .menus__groups-choice__name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__groups .menus__groups-choice__name {
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus__groups .menus__groups-choice__name {
+    font-size: 1.2rem;
+  }
+}
+.menus__groups .menus__groups-choice__name p {
+  display: inline-block;
+}
+.menus__groups .menus__groups-choice__name .description {
+  width: 83%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menus__groups .menus__groups-choice__name .description:hover {
+  overflow: visible;
+}
+.menus__groups .menus__groups-choice__name .description:hover + .price {
+  position: relative;
+  top: -1.7rem;
+}
+.menus__groups .menus__groups-choice__name .price {
+  font-weight: bold;
+  padding: 0 1.5rem 0 0.3rem;
+}
+@media screen and (min-width: 992px) {
+  .menus__groups .menus__groups-choice:hover .check-choice {
+    animation: appear-checkbox 1s 0.1s ease forwards;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus__groups .menus__groups-choice:hover .check-choice .fa-circle-check {
+    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus__groups .menus__groups-choice:hover h3 {
+    animation: deplace-submenu-title 0.5s ease-in-out forwards;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus__groups .menus__groups-choice:hover .menus__groups-choice__name .price {
+    animation: deplace-submenu-price 0.5s ease-in-out forwards;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .menus__groups .menus__groups-choice {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menus__groups .menus__groups-choice {
+    width: 55%;
+  }
+}
+
+/*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
+.anim-starters {
   animation: appear-group-menu 1s 0.5s ease-in-out forwards;
 }
 @media screen and (min-width: 992px) {
-  .menus__starters {
-    padding-left: 12%;
-  }
-}
-.menus__starters-title {
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: 1.5rem 0 0 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-title {
-    padding-top: 2.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-title {
-    font-size: 1.5rem;
-    padding-top: 3.5rem;
-  }
-}
-.menus__starters span {
-  display: block;
-  width: 3rem;
-  border: 2px solid #99E2D0;
-  margin: 0.3rem 0 1rem 1.5rem;
-}
-@media screen and (min-width: 992px) {
-  .menus__starters span {
-    width: 4rem;
-    margin-bottom: 2.5rem;
-  }
-}
-
-/*Implementation of the different classes for the submenus according to the $menusChoice map*/
-.menus__starters-choice1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice1:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice1:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice1:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice1:hover .menus__starters-choice1__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice1 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice1 {
-    width: 55%;
+  .anim-starters .anim-starters1 {
     margin: 1rem 0 1.5rem 10%;
   }
-}
-.menus__starters-choice1 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice1 h3 {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice1 h3 {
-    font-size: 1.5rem;
-  }
-}
-.menus__starters-choice1 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
-}
-.menus__starters-choice1 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
-}
-.menus__starters-choice1 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
-}
-.menus__starters-choice1 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice1 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice1 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__starters-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__starters-choice1 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__starters-choice1 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__starters-choice1 input[type=checkbox]:checked ~ h3 ~ .menus__starters-choice1__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__starters-choice1__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice1__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice1__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__starters-choice1__name p {
-  display: inline-block;
-}
-.menus__starters-choice1__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__starters-choice1__name .description:hover {
-  overflow: visible;
-}
-.menus__starters-choice1__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__starters-choice1__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
-}
-
-.menus__starters-choice2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice2:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice2:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice2:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice2:hover .menus__starters-choice2__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice2 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice2 {
-    width: 55%;
+  .anim-starters .anim-starters2 {
     margin: 1rem 0 1.5rem 15%;
   }
-}
-.menus__starters-choice2 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice2 h3 {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice2 h3 {
-    font-size: 1.5rem;
-  }
-}
-.menus__starters-choice2 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
-}
-.menus__starters-choice2 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
-}
-.menus__starters-choice2 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
-}
-.menus__starters-choice2 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice2 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice2 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__starters-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__starters-choice2 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__starters-choice2 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__starters-choice2 input[type=checkbox]:checked ~ h3 ~ .menus__starters-choice2__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__starters-choice2__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice2__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice2__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__starters-choice2__name p {
-  display: inline-block;
-}
-.menus__starters-choice2__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__starters-choice2__name .description:hover {
-  overflow: visible;
-}
-.menus__starters-choice2__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__starters-choice2__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
-}
-
-.menus__starters-choice3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice3:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice3:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice3:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice3:hover .menus__starters-choice3__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice3 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice3 {
-    width: 55%;
+  .anim-starters .anim-starters3 {
     margin: 1rem 0 1.5rem 20%;
   }
 }
-.menus__starters-choice3 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice3 h3 {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice3 h3 {
-    font-size: 1.5rem;
-  }
-}
-.menus__starters-choice3 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
-}
-.menus__starters-choice3 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
-}
-.menus__starters-choice3 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
-}
-.menus__starters-choice3 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice3 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice3 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__starters-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__starters-choice3 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__starters-choice3 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__starters-choice3 input[type=checkbox]:checked ~ h3 ~ .menus__starters-choice3__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__starters-choice3__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__starters-choice3__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__starters-choice3__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__starters-choice3__name p {
-  display: inline-block;
-}
-.menus__starters-choice3__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__starters-choice3__name .description:hover {
-  overflow: visible;
-}
-.menus__starters-choice3__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__starters-choice3__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
-}
 
-/*The 3 differents menus*/
-.menus__dishes {
-  opacity: 0;
-  /*Underline title*/
-  /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
+.anim-dishes {
   animation: appear-group-menu 1s 2s ease-in-out forwards;
 }
 @media screen and (min-width: 992px) {
-  .menus__dishes {
-    padding-left: 12%;
-  }
-}
-.menus__dishes-title {
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: 1.5rem 0 0 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-title {
-    padding-top: 2.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-title {
-    font-size: 1.5rem;
-    padding-top: 3.5rem;
-  }
-}
-.menus__dishes span {
-  display: block;
-  width: 3rem;
-  border: 2px solid #99E2D0;
-  margin: 0.3rem 0 1rem 1.5rem;
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes span {
-    width: 4rem;
-    margin-bottom: 2.5rem;
-  }
-}
-
-/*Implementation of the different classes for the submenus according to the $menusChoice map*/
-.menus__dishes-choice1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice1:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice1:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice1:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice1:hover .menus__dishes-choice1__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice1 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice1 {
-    width: 55%;
+  .anim-dishes .anim-dishes1 {
     margin: 1rem 0 1.5rem 10%;
   }
-}
-.menus__dishes-choice1 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice1 h3 {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice1 h3 {
-    font-size: 1.5rem;
-  }
-}
-.menus__dishes-choice1 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
-}
-.menus__dishes-choice1 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
-}
-.menus__dishes-choice1 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
-}
-.menus__dishes-choice1 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice1 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice1 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__dishes-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__dishes-choice1 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__dishes-choice1 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__dishes-choice1 input[type=checkbox]:checked ~ h3 ~ .menus__dishes-choice1__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__dishes-choice1__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice1__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice1__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__dishes-choice1__name p {
-  display: inline-block;
-}
-.menus__dishes-choice1__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__dishes-choice1__name .description:hover {
-  overflow: visible;
-}
-.menus__dishes-choice1__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__dishes-choice1__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
-}
-
-.menus__dishes-choice2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice2:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice2:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice2:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice2:hover .menus__dishes-choice2__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice2 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice2 {
-    width: 55%;
+  .anim-dishes .anim-dishes2 {
     margin: 1rem 0 1.5rem 15%;
   }
-}
-.menus__dishes-choice2 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice2 h3 {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice2 h3 {
-    font-size: 1.5rem;
-  }
-}
-.menus__dishes-choice2 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
-}
-.menus__dishes-choice2 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
-}
-.menus__dishes-choice2 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
-}
-.menus__dishes-choice2 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice2 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice2 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__dishes-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__dishes-choice2 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__dishes-choice2 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__dishes-choice2 input[type=checkbox]:checked ~ h3 ~ .menus__dishes-choice2__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__dishes-choice2__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice2__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice2__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__dishes-choice2__name p {
-  display: inline-block;
-}
-.menus__dishes-choice2__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__dishes-choice2__name .description:hover {
-  overflow: visible;
-}
-.menus__dishes-choice2__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__dishes-choice2__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
-}
-
-.menus__dishes-choice3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice3:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice3:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice3:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice3:hover .menus__dishes-choice3__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice3 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice3 {
-    width: 55%;
+  .anim-dishes .anim-dishes3 {
     margin: 1rem 0 1.5rem 20%;
   }
 }
-.menus__dishes-choice3 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice3 h3 {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice3 h3 {
-    font-size: 1.5rem;
-  }
-}
-.menus__dishes-choice3 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
-}
-.menus__dishes-choice3 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
-}
-.menus__dishes-choice3 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
-}
-.menus__dishes-choice3 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice3 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice3 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__dishes-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__dishes-choice3 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__dishes-choice3 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__dishes-choice3 input[type=checkbox]:checked ~ h3 ~ .menus__dishes-choice3__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__dishes-choice3__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__dishes-choice3__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__dishes-choice3__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__dishes-choice3__name p {
-  display: inline-block;
-}
-.menus__dishes-choice3__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__dishes-choice3__name .description:hover {
-  overflow: visible;
-}
-.menus__dishes-choice3__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__dishes-choice3__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
-}
 
-/*The 3 differents menus*/
-.menus__desserts {
-  opacity: 0;
-  /*Underline title*/
-  /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
+.anim-desserts {
   animation: appear-group-menu 1s 4.5s ease-in-out forwards;
 }
 @media screen and (min-width: 992px) {
-  .menus__desserts {
-    padding-left: 12%;
-  }
-}
-.menus__desserts-title {
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: 1.5rem 0 0 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-title {
-    padding-top: 2.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-title {
-    font-size: 1.5rem;
-    padding-top: 3.5rem;
-  }
-}
-.menus__desserts span {
-  display: block;
-  width: 3rem;
-  border: 2px solid #99E2D0;
-  margin: 0.3rem 0 1rem 1.5rem;
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts span {
-    width: 4rem;
-    margin-bottom: 2.5rem;
-  }
-}
-
-/*Implementation of the different classes for the submenus according to the $menusChoice map*/
-.menus__desserts-choice1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice1:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice1:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice1:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice1:hover .menus__desserts-choice1__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice1 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice1 {
-    width: 55%;
+  .anim-desserts .anim-desserts1 {
     margin: 1rem 0 1.5rem 10%;
   }
-}
-.menus__desserts-choice1 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice1 h3 {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice1 h3 {
-    font-size: 1.5rem;
-  }
-}
-.menus__desserts-choice1 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
-}
-.menus__desserts-choice1 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
-}
-.menus__desserts-choice1 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
-}
-.menus__desserts-choice1 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice1 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice1 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__desserts-choice1 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__desserts-choice1 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__desserts-choice1 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__desserts-choice1 input[type=checkbox]:checked ~ h3 ~ .menus__desserts-choice1__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__desserts-choice1__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice1__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice1__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__desserts-choice1__name p {
-  display: inline-block;
-}
-.menus__desserts-choice1__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__desserts-choice1__name .description:hover {
-  overflow: visible;
-}
-.menus__desserts-choice1__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__desserts-choice1__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
-}
-
-.menus__desserts-choice2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice2:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice2:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice2:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice2:hover .menus__desserts-choice2__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice2 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice2 {
-    width: 55%;
+  .anim-desserts .anim-desserts2 {
     margin: 1rem 0 1.5rem 15%;
   }
-}
-.menus__desserts-choice2 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice2 h3 {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice2 h3 {
-    font-size: 1.5rem;
-  }
-}
-.menus__desserts-choice2 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
-}
-.menus__desserts-choice2 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
-}
-.menus__desserts-choice2 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
-}
-.menus__desserts-choice2 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice2 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice2 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__desserts-choice2 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__desserts-choice2 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__desserts-choice2 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__desserts-choice2 input[type=checkbox]:checked ~ h3 ~ .menus__desserts-choice2__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__desserts-choice2__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice2__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice2__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__desserts-choice2__name p {
-  display: inline-block;
-}
-.menus__desserts-choice2__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__desserts-choice2__name .description:hover {
-  overflow: visible;
-}
-.menus__desserts-choice2__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__desserts-choice2__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
-}
-
-.menus__desserts-choice3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 5.6rem;
-  border-radius: 1.3rem;
-  box-shadow: 0px 2px 13px -5px #d0d0d0;
-  overflow: hidden;
-  margin: 0.5rem auto;
-  background-color: #fff;
-  padding-left: 1rem;
-  opacity: 0;
-  /*Animations on hover for Desktop*/
-  /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-  animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
-  /*Resizing of the clickable part*/
-  /*Appearance of the confirmation of the choice*/
-  /*Rotation of the icon in the checkbox*/
-  /*Decreasing the size of the submenu title*/
-  /*Submenu price shift to the left*/
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice3:hover .check-choice {
-    animation: appear-checkbox 1s 0.1s ease forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice3:hover .check-choice > :nth-child(1) {
-    animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice3:hover h3 {
-    animation: deplace-submenu-title 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice3:hover .menus__desserts-choice3__name .price {
-    animation: deplace-submenu-price 0.5s ease-in-out forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice3 {
-    width: 80%;
-    margin: 1rem auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice3 {
-    width: 55%;
+  .anim-desserts .anim-desserts3 {
     margin: 1rem 0 1.5rem 20%;
   }
 }
-.menus__desserts-choice3 h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  line-height: 1.8rem;
-  padding-bottom: 0.2rem;
+
+/*Animation of each submenu*/
+.anim-starters1 {
+  animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
 }
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice3 h3 {
-    margin-left: 1.5rem;
-  }
+
+.anim-starters2 {
+  animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
 }
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice3 h3 {
-    font-size: 1.5rem;
-  }
+
+.anim-starters3 {
+  animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
 }
-.menus__desserts-choice3 .check-choice {
-  position: absolute;
-  text-align: center;
-  line-height: 0.6rem;
-  width: 4.3rem;
-  height: 5.8rem;
-  top: -0.1rem;
-  right: -4.3rem;
-  background-color: #99E2D0;
+
+.anim-dishes1 {
+  animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
 }
-.menus__desserts-choice3 .check-choice > .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  line-height: 5.5rem;
-  padding-right: 0.2rem;
+
+.anim-dishes2 {
+  animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
 }
-.menus__desserts-choice3 input[type=checkbox] {
-  position: absolute;
-  width: 5.6rem;
-  height: 5.6rem;
-  opacity: 0;
+
+.anim-dishes3 {
+  animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
 }
-.menus__desserts-choice3 input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 18.7rem;
-  height: 5.5rem;
-  margin-right: 1.5rem;
+
+.anim-desserts1 {
+  animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
 }
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice3 input[type=checkbox] + label::before {
-    width: 47.5rem;
-  }
+
+.anim-desserts2 {
+  animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
 }
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice3 input[type=checkbox] + label::before {
-    width: 51rem;
-  }
-}
-.menus__desserts-choice3 input[type=checkbox]:checked ~ :nth-child(5) {
-  animation: appear-checkbox 1s 0.1s ease forwards;
-}
-.menus__desserts-choice3 input[type=checkbox]:checked ~ :nth-child(5) > *:nth-child(1) {
-  animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-}
-.menus__desserts-choice3 input[type=checkbox]:checked ~ h3 {
-  animation: deplace-submenu-title 0.5s ease-in-out forwards;
-}
-.menus__desserts-choice3 input[type=checkbox]:checked ~ h3 ~ .menus__desserts-choice3__name .price {
-  animation: deplace-submenu-price 0.5s ease-in-out forwards;
-}
-.menus__desserts-choice3__name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.98rem;
-}
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .menus__desserts-choice3__name {
-    margin-left: 1.5rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .menus__desserts-choice3__name {
-    font-size: 1.2rem;
-  }
-}
-.menus__desserts-choice3__name p {
-  display: inline-block;
-}
-.menus__desserts-choice3__name .description {
-  width: 83%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menus__desserts-choice3__name .description:hover {
-  overflow: visible;
-}
-.menus__desserts-choice3__name .description:hover + .price {
-  position: relative;
-  top: -1.7rem;
-}
-.menus__desserts-choice3__name .price {
-  font-weight: bold;
-  padding: 0 1.5rem 0 0.3rem;
+
+.anim-desserts3 {
+  animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
 }
 
 @keyframes appear-group-menu {

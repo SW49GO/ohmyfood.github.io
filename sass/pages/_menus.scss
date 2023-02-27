@@ -36,7 +36,7 @@
 .title-menu {
     position: relative;
 
-    &__name {
+    & h1 {
         position: absolute;
         z-index: 1;
         width: 100%;
@@ -83,7 +83,7 @@
     }
 }
 
-/*Implementation of the differents menus*/
+/*Implementation of the form menus*/
 .menus {
     height: 75rem;
     background-color: $bgc-secondary;
@@ -123,304 +123,274 @@
     }
 }
 
-///Creation of maps
-$menus : starters,
-dishes,
-desserts;
-$menusChoice: 1, 2, 3;
+/*The groups menus Starters, Dishes & Desserts*/
+.menus__groups {
+    opacity: 0;
 
-// Implementation of classes according to the $menus maps
+    @include desktop {
+        padding-left: 12%;
+    }
 
-@each $menu in $menus {
+    & h2 {
+        font-size: 1.2rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        padding: 1.5rem 0 0 1.5rem;
 
-    /*The 3 differents menus*/
-    .menus__#{$menu} {
-        opacity: 0;
+        @include tablet {
+            padding-top: 2.5rem;
+        }
 
         @include desktop {
-            padding-left: 12%;
-        }
-
-        &-title {
-            font-size: 1.2rem;
-            font-weight: normal;
-            text-transform: uppercase;
-            padding: 1.5rem 0 0 1.5rem;
-
-            @include tablet {
-                padding-top: 2.5rem;
-            }
-
-            @include desktop {
-                font-size: 1.5rem;
-                padding-top: 3.5rem;
-            }
-
-        }
-
-        /*Underline title*/
-        & span {
-            display: block;
-            width: 3rem;
-            border: 2px solid $tertiary-color;
-            margin: 0.3rem 0 1rem 1.5rem;
-
-            @include desktop {
-                width: 4rem;
-                margin-bottom: 2.5rem;
-            }
-        }
-
-        /*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
-        @if $menu ==starters {
-            animation: appear-group-menu 1s 0.5s ease-in-out forwards;
-        }
-
-        @else if $menu ==dishes {
-            animation: appear-group-menu 1s 2s ease-in-out forwards;
-        }
-
-        @else {
-            animation: appear-group-menu 1s 4.5s ease-in-out forwards;
+            font-size: 1.5rem;
+            padding-top: 3.5rem;
         }
 
     }
 
-    /*Implementation of the different classes for the submenus according to the $menusChoice map*/
+    /*Underline title*/
+    & span {
+        display: block;
+        width: 3rem;
+        border: 2px solid $tertiary-color;
+        margin: 0.3rem 0 1rem 1.5rem;
 
-    @each $choice in $menusChoice {
-        .menus__#{$menu}-choice#{$choice} {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            width: 90%;
-            height: 5.6rem;
-            border-radius: 1.3rem;
-            box-shadow: 0px 2px 13px -5px #d0d0d0;
-            overflow: hidden;
-            margin: 0.5rem auto;
-            background-color: #fff;
-            padding-left: 1rem;
-            opacity: 0;
+        @include desktop {
+            width: 4rem;
+            margin-bottom: 2.5rem;
+        }
+    }
 
-            /*Animations on hover for Desktop*/
-            &:hover {
-                & .check-choice {
-                    @include desktop {
-                        animation: appear-checkbox 1s 0.1s ease forwards;
-                    }
+    /*The differents choices*/
+    & .menus__groups-choice {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 90%;
+        height: 5.6rem;
+        border-radius: 1.3rem;
+        box-shadow: 0px 2px 13px -5px #d0d0d0;
+        overflow: hidden;
+        margin: 0.5rem auto;
+        background-color: #fff;
+        padding-left: 1rem;
+        opacity: 0;
 
-                    &>:nth-child(1) {
-                        @include desktop {
-                            animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-                        }
-                    }
-                }
-
-                & h3 {
-                    @include desktop {
-                        animation: deplace-submenu-title 0.5s ease-in-out forwards;
-                    }
-                }
-
-                & .menus__#{$menu}-choice#{$choice}__name .price {
-                    @include desktop {
-                        animation: deplace-submenu-price 0.5s ease-in-out forwards;
-                    }
-                }
-            }
+        & h3 {
+            @include text-ellipsis();
+            width: 100%;
+            line-height: 1.8rem;
+            padding-bottom: 0.2rem;
 
             @include tablet {
-                width: 80%;
-                margin: 1rem auto;
+                margin-left: 1.5rem;
             }
 
             @include desktop {
-                width: 55%;
+                font-size: 1.5rem;
+            }
+        }
 
-                @if $choice ==1 {
-                    margin: 1rem 0 1.5rem 10%;
-                }
+        /*The checkbox that appear*/
+        & .check-choice {
+            position: absolute;
+            text-align: center;
+            line-height: 0.6rem;
+            width: 4.3rem;
+            height: 5.8rem;
+            top: -0.1rem;
+            right: -4.3rem;
+            background-color: $tertiary-color;
 
-                @else if $choice ==2 {
-                    margin: 1rem 0 1.5rem 15%;
-                }
+            &>.fa-circle-check {
+                color: white;
+                font-size: 1.5rem;
+                line-height: 5.5rem;
+                padding-right: 0.2rem;
+            }
+        }
 
-                @else {
-                    margin: 1rem 0 1.5rem 20%;
+        & input[type="checkbox"] {
+            position: absolute;
+            width: 5.6rem;
+            height: 5.6rem;
+            opacity: 0;
+        }
+
+        /*Resizing of the clickable part*/
+        & input[type="checkbox"]+label {
+            position: absolute;
+            top: 0;
+            width: 18.7rem;
+            height: 5.5rem;
+            margin-right: 1.5rem;
+
+            @include tablet {
+                width: 47.5rem;
+            }
+
+            @include desktop {
+                width: 51rem;
+            }
+        }
+
+        /*Appearance of the confirmation of the choice*/
+        & input[type="checkbox"]:checked~.check-choice {
+            animation: appear-checkbox 1s 0.1s ease forwards;
+        }
+
+        /*Rotation of the icon in the checkbox*/
+        & input[type="checkbox"]:checked~.check-choice>.fa-circle-check {
+            animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+        }
+
+        // Diminuer la taille (width 100%->75%) de la boîte contenant le titre du menu
+        /*Decreasing the size of the submenu title*/
+        & input[type=checkbox]:checked~h3 {
+            animation: deplace-submenu-title 0.5s ease-in-out forwards;
+        }
+
+        // Ajouter une marge (margin-right 0->60px) qui va déplacer le prix du menu
+        /*Submenu price shift to the left*/
+        & input[type=checkbox]:checked~h3~.menus__groups-choice__name .price {
+            animation: deplace-submenu-price 0.5s ease-in-out forwards;
+        }
+
+        &__name {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.98rem;
+
+            @include tablet {
+                margin-left: 1.5rem;
+            }
+
+            @include desktop {
+                font-size: 1.2rem;
+            }
+
+            & p {
+                display: inline-block;
+            }
+
+            & .description {
+                width: 83%;
+                @include text-ellipsis();
+
+                &:hover {
+                    overflow: visible;
+
+                    &+.price {
+                        position: relative;
+                        top: -1.7rem;
+                    }
                 }
             }
 
-            /*Animation for each submenu from top to bottom (opacity 0->1 & height 0->5.6rem)*/
-
-            @if $menu ==starters {
-                @if $choice ==1 {
-                    animation: appear-submenu-choice 100ms 0.5s ease-in-out forwards;
-                }
-
-                @else if $choice ==2 {
-                    animation: appear-submenu-choice 100ms 1s ease-in-out forwards;
-                }
-
-                @else {
-                    animation: appear-submenu-choice 100ms 1.5s ease-in-out forwards;
-                }
+            & .price {
+                font-weight: bold;
+                padding: 0 1.5rem 0 0.3rem;
             }
+        }
 
-            @if $menu ==dishes {
-                @if $choice ==1 {
-                    animation: appear-submenu-choice 100ms 3s ease-in-out forwards;
+        /*Animations on hover for Desktop*/
+        &:hover {
+            & .check-choice {
+                @include desktop {
+                    animation: appear-checkbox 1s 0.1s ease forwards;
                 }
 
-                @else if $choice ==2 {
-                    animation: appear-submenu-choice 100ms 3.5s ease-in-out forwards;
-                }
-
-                @else {
-                    animation: appear-submenu-choice 100ms 4s ease-in-out forwards;
-                }
-            }
-
-            @if $menu ==desserts {
-                @if $choice ==1 {
-                    animation: appear-submenu-choice 100ms 5s ease-in-out forwards;
-                }
-
-                @else if $choice ==2 {
-                    animation: appear-submenu-choice 100ms 5.5s ease-in-out forwards;
-                }
-
-                @else {
-                    animation: appear-submenu-choice 100ms 6s ease-in-out forwards;
+                & .fa-circle-check {
+                    @include desktop {
+                        animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
+                    }
                 }
             }
 
             & h3 {
-                @include text-ellipsis();
-                width: 100%;
-                line-height: 1.8rem;
-                padding-bottom: 0.2rem;
-
-                @include tablet {
-                    margin-left: 1.5rem;
-                }
-
                 @include desktop {
-                    font-size: 1.5rem;
+                    animation: deplace-submenu-title 0.5s ease-in-out forwards;
                 }
             }
 
-            & .check-choice {
-                position: absolute;
-                text-align: center;
-                line-height: 0.6rem;
-                width: 4.3rem;
-                height: 5.8rem;
-                top: -0.1rem;
-                right: -4.3rem;
-                background-color: $tertiary-color;
-
-                &>.fa-circle-check {
-                    color: white;
-                    font-size: 1.5rem;
-                    line-height: 5.5rem;
-                    padding-right: 0.2rem;
-                }
-            }
-
-            & input[type="checkbox"] {
-                position: absolute;
-                width: 5.6rem;
-                height: 5.6rem;
-                opacity: 0;
-            }
-
-            // Cible l'élément ::before d'un élément <label> qui suit immédiatement un élément <input>, 
-            // pour étendre la possibilité du clic sur toute la carte
-            /*Resizing of the clickable part*/
-            & input[type="checkbox"]+label::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                width: 18.7rem;
-                height: 5.5rem;
-                margin-right: 1.5rem;
-
-                @include tablet {
-                    width: 47.5rem;
-                }
-
+            & .menus__groups-choice__name .price {
                 @include desktop {
-                    width: 51rem;
-                }
-            }
-
-            // Sélectionne le 5ème frère du parent de <input> -> .check-choice
-            // pour faire apparaître la checkbox (right -70px->-5px)
-            /*Appearance of the confirmation of the choice*/
-            & input[type="checkbox"]:checked~:nth-child(5) {
-                animation: appear-checkbox 1s 0.1s ease forwards;
-            }
-
-            // Sélectionne le 1er enfants des enfants contenu dans .check-choice (>* tt les enfants direct peut importe l'élément)
-            // pour faire tourner (rotate 0->360°) l'icone check
-            /*Rotation of the icon in the checkbox*/
-            & input[type="checkbox"]:checked~:nth-child(5)>*:nth-child(1) {
-                animation: rotate-icon-checkbox 0.5s 0.4s ease-in-out;
-            }
-
-            // Sélectionne tout les <h3> qui suivent directement <input> 
-            // pour diminuer la taille (width 100%->75%) de la boîte contenant le titre du menu
-            /*Decreasing the size of the submenu title*/
-            & input[type=checkbox]:checked~h3 {
-                animation: deplace-submenu-title 0.5s ease-in-out forwards;
-            }
-
-            // Sélectionne .price dans .menu__X__choiceX__name, qui est un frère suivant le <h3>, lui même un des frères de <input> 
-            // pour ajouter une marge (margin-right 0->60px) qui va déplacer le prix du menu
-            /*Submenu price shift to the left*/
-            & input[type=checkbox]:checked~h3~.menus__#{$menu}-choice#{$choice}__name .price {
-                animation: deplace-submenu-price 0.5s ease-in-out forwards;
-            }
-
-            &__name {
-                display: flex;
-                justify-content: space-between;
-                font-size: 0.98rem;
-
-                @include tablet {
-                    margin-left: 1.5rem;
-                }
-
-                @include desktop {
-                    font-size: 1.2rem;
-                }
-
-                & p {
-                    display: inline-block;
-                }
-
-                & .description {
-                    width: 83%;
-                    @include text-ellipsis();
-
-                    &:hover {
-                        overflow: visible;
-
-                        &+.price {
-                            position: relative;
-                            top: -1.7rem;
-                        }
-                    }
-                }
-
-                & .price {
-                    font-weight: bold;
-                    padding: 0 1.5rem 0 0.3rem;
+                    animation: deplace-submenu-price 0.5s ease-in-out forwards;
                 }
             }
         }
+
+        @include tablet {
+            width: 80%;
+            margin: 1rem auto;
+        }
+
+        @include desktop {
+            width: 55%;
+        }
+    }
+
+}
+
+/*Animation of each menu group (opacity 0->1): Starters,Dishes & Desserts*/
+$groups: starters, dishes, desserts;
+$temp-appear-group: 0.5s,
+    2s,
+    4.5s;
+$count : 1;
+
+@each $group in $groups {
+
+    .anim-#{$group} {
+        animation: appear-group-menu 1s nth($temp-appear-group, $count) ease-in-out forwards;
+
+        @include desktop {
+            @for $i from 1 through 3 {
+                $marg: 10%,
+                15%,
+                20%;
+
+                & .anim-#{$group}#{$i} {
+                    margin: 1rem 0 1.5rem nth($marg, $i);
+                }
+            }
+        }
+    }
+
+    $count: $count+1;
+}
+
+/*Animation of each submenu*/
+@for $i from 1 through 3 {
+    $temp: 0.5s,
+    1s,
+    1.5s;
+
+    .anim-starters#{$i} {
+        animation: appear-submenu-choice 100ms nth($temp, $i) ease-in-out forwards;
+    }
+}
+
+@for $i from 1 through 3 {
+    $temp: 3s,
+    3.5s,
+    4s;
+
+    .anim-dishes#{$i} {
+        animation: appear-submenu-choice 100ms nth($temp, $i) ease-in-out forwards;
+
+    }
+}
+
+@for $i from 1 through 3 {
+    $temp: 5s,
+    5.5s,
+    6s;
+
+    .anim-desserts#{$i} {
+        animation: appear-submenu-choice 100ms nth($temp, $i) ease-in-out forwards;
+
     }
 }
 
