@@ -946,6 +946,9 @@ ul li:first-child i {
     width: 10rem;
   }
 }
+.location input[type=submit] {
+  border: none;
+}
 .location ::-webkit-input-placeholder {
   font-weight: 700;
   font-size: 1rem;

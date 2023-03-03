@@ -119,6 +119,10 @@ $letters-name: (
         }
     }
 
+    & input[type="submit"] {
+        border: none;
+    }
+
     & ::placeholder {
         font-weight: 700;
         font-size: 1rem;
